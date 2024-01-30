@@ -1,0 +1,83 @@
+2024-01-31 01:30:30,167 INFO    StreamThr :70462 [internal.py:wandb_internal():86] W&B internal server running at pid: 70462, started at: 2024-01-31 01:30:30.166992
+2024-01-31 01:30:30,169 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status
+2024-01-31 01:30:30,171 INFO    WriterThread:70462 [datastore.py:open_for_write():87] open: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/run-9b9l2g8a.wandb
+2024-01-31 01:30:30,171 DEBUG   SenderThread:70462 [sender.py:send():382] send: header
+2024-01-31 01:30:30,188 DEBUG   SenderThread:70462 [sender.py:send():382] send: run
+2024-01-31 01:30:31,183 INFO    SenderThread:70462 [dir_watcher.py:__init__():211] watching files in: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files
+2024-01-31 01:30:31,183 INFO    SenderThread:70462 [sender.py:_start_run_threads():1136] run started: 9b9l2g8a with start time 1706644830.165434
+2024-01-31 01:30:31,191 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: check_version
+2024-01-31 01:30:31,192 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: check_version
+2024-01-31 01:30:32,013 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: run_start
+2024-01-31 01:30:33,188 DEBUG   HandlerThread:70462 [system_info.py:__init__():27] System info init
+2024-01-31 01:30:33,188 DEBUG   HandlerThread:70462 [system_info.py:__init__():42] System info init done
+2024-01-31 01:30:33,188 INFO    HandlerThread:70462 [system_monitor.py:start():194] Starting system monitor
+2024-01-31 01:30:33,188 INFO    SystemMonitor:70462 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-31 01:30:33,188 INFO    HandlerThread:70462 [system_monitor.py:probe():214] Collecting system info
+2024-01-31 01:30:33,189 INFO    SystemMonitor:70462 [interfaces.py:start():190] Started cpu monitoring
+2024-01-31 01:30:33,191 INFO    SystemMonitor:70462 [interfaces.py:start():190] Started disk monitoring
+2024-01-31 01:30:33,191 INFO    SystemMonitor:70462 [interfaces.py:start():190] Started gpu monitoring
+2024-01-31 01:30:33,192 INFO    SystemMonitor:70462 [interfaces.py:start():190] Started memory monitoring
+2024-01-31 01:30:33,193 INFO    SystemMonitor:70462 [interfaces.py:start():190] Started network monitoring
+2024-01-31 01:30:33,197 ERROR   gpu       :70462 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-01-31 01:30:33,197 ERROR   gpu       :70462 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-01-31 01:30:33,238 DEBUG   HandlerThread:70462 [system_info.py:probe():151] Probing system
+2024-01-31 01:30:33,244 DEBUG   HandlerThread:70462 [system_info.py:_probe_git():136] Probing git
+2024-01-31 01:30:33,255 DEBUG   HandlerThread:70462 [system_info.py:_probe_git():144] Probing git done
+2024-01-31 01:30:33,255 DEBUG   HandlerThread:70462 [system_info.py:probe():199] Probing system done
+2024-01-31 01:30:33,255 DEBUG   HandlerThread:70462 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-91-generic-x86_64-with-glibc2.31', 'python': '3.9.18', 'heartbeatAt': '2024-01-30T20:00:33.238187', 'startedAt': '2024-01-30T20:00:30.160389', 'docker': None, 'cuda': None, 'args': ('--seed', '0', '--env_name', 'Ant', '--dataset', 'expert', '--discrete_control', '0', '--state_dim', '111', '--action_dim', '8', '--tau', '0.01', '--learning_rate', '0.0003', '--hidden_units', '256', '--batch_size', '256', '--timeout', '1000', '--max_steps', '1000000', '--log_interval', '10000', '--device', 'cuda'), 'state': 'running', 'program': '/home/swaminathan/git/INAC_MLRC_24/run_ac_offline.py', 'codePathLocal': 'run_ac_offline.py', 'codePath': 'run_ac_offline.py', 'git': {'remote': 'https://github.com/SwaminathanSK/INAC_MLRC_24.git', 'commit': '57ec81d29efc9e080db736edcbee9ff0f0a11a64'}, 'email': 'swamisathya2004@gmail.com', 'root': '/home/swaminathan/git/INAC_MLRC_24', 'host': 'swaminathan-ASUS-TUF-Dash-F15-FX517ZM-FX517ZM', 'username': 'swaminathan', 'executable': '/home/swaminathan/anaconda3/envs/inac/bin/python', 'cpu_count': 10, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2590.048, 'min': 400.0, 'max': 4350.0}, 'cpu_freq_per_core': [{'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4700.0}, {'current': 2294.445, 'min': 400.0, 'max': 4700.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 4600.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}, {'current': 2700.0, 'min': 400.0, 'max': 3500.0}], 'disk': {'/': {'total': 147.33804321289062, 'used': 106.9803466796875}}, 'gpu': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060 Laptop GPU', 'memory_total': 6442450944}], 'memory': {'total': 15.243606567382812}}
+2024-01-31 01:30:33,256 INFO    HandlerThread:70462 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-31 01:30:33,256 INFO    HandlerThread:70462 [system_monitor.py:probe():227] Publishing system info
+2024-01-31 01:30:33,256 DEBUG   HandlerThread:70462 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-01-31 01:30:34,165 DEBUG   HandlerThread:70462 [system_info.py:_save_conda():220] Saving conda packages done
+2024-01-31 01:30:34,165 INFO    HandlerThread:70462 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-31 01:30:34,172 DEBUG   SenderThread:70462 [sender.py:send():382] send: files
+2024-01-31 01:30:34,172 INFO    SenderThread:70462 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-01-31 01:30:34,178 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: python_packages
+2024-01-31 01:30:34,178 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-31 01:30:34,179 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: python_packages
+2024-01-31 01:30:34,179 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: stop_status
+2024-01-31 01:30:34,180 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-31 01:30:34,189 INFO    Thread-12 :70462 [dir_watcher.py:_on_file_created():271] file/dir created: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files/requirements.txt
+2024-01-31 01:30:34,189 INFO    Thread-12 :70462 [dir_watcher.py:_on_file_created():271] file/dir created: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files/wandb-metadata.json
+2024-01-31 01:30:34,189 INFO    Thread-12 :70462 [dir_watcher.py:_on_file_created():271] file/dir created: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files/conda-environment.yaml
+2024-01-31 01:30:34,768 DEBUG   SenderThread:70462 [sender.py:send():382] send: telemetry
+2024-01-31 01:30:35,188 INFO    Thread-12 :70462 [dir_watcher.py:_on_file_created():271] file/dir created: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files/output.log
+2024-01-31 01:30:35,578 INFO    wandb-upload_0:70462 [upload_job.py:push():131] Uploaded file /tmp/tmpa2a9h2fuwandb/d8s3l8if-wandb-metadata.json
+2024-01-31 01:30:35,771 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:30:37,189 INFO    Thread-12 :70462 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files/output.log
+2024-01-31 01:30:40,772 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:30:45,773 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:30:49,178 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-31 01:30:49,179 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: stop_status
+2024-01-31 01:30:49,181 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-31 01:30:51,614 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:30:56,615 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:01,618 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:04,178 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-31 01:31:04,179 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: stop_status
+2024-01-31 01:31:04,197 INFO    Thread-12 :70462 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/swaminathan/git/INAC_MLRC_24/wandb/run-20240131_013030-9b9l2g8a/files/config.yaml
+2024-01-31 01:31:04,220 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-31 01:31:09,114 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:14,115 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:19,116 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:19,178 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-31 01:31:19,179 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: stop_status
+2024-01-31 01:31:19,220 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-31 01:31:24,557 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:29,558 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:33,193 DEBUG   SystemMonitor:70462 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-31 01:31:33,194 DEBUG   SenderThread:70462 [sender.py:send():382] send: stats
+2024-01-31 01:31:34,179 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-31 01:31:34,179 DEBUG   SenderThread:70462 [sender.py:send_request():409] send_request: stop_status
+2024-01-31 01:31:34,220 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-31 01:31:35,053 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:40,054 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:45,056 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:49,205 INFO    memory    :70462 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-01-31 01:31:49,205 DEBUG   SystemMonitor:70462 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-31 01:31:49,206 DEBUG   SystemMonitor:70462 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-31 01:31:49,207 DEBUG   SenderThread:70462 [sender.py:send():382] send: stats
+2024-01-31 01:31:50,033 INFO    MainThread:70462 [internal.py:handle_exit():76] Internal process exited
+2024-01-31 01:31:50,208 DEBUG   HandlerThread:70462 [handler.py:handle_request():146] handle_request: status_report
+2024-01-31 01:31:51,262 WARNING StreamThr :70462 [internal.py:is_dead():414] Internal process exiting, parent pid 70431 disappeared
+2024-01-31 01:31:51,262 ERROR   StreamThr :70462 [internal.py:wandb_internal():152] Internal process shutdown.

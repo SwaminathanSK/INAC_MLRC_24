@@ -1,0 +1,50 @@
+INFO:root:seed: 0
+INFO:root:env_name: Ant
+INFO:root:dataset: expert
+INFO:root:discrete_control: 0
+INFO:root:state_dim: 111
+INFO:root:action_dim: 8
+INFO:root:tau: 0.01
+INFO:root:max_steps: 1000000
+INFO:root:log_interval: 10000
+INFO:root:learning_rate: 0.0003
+INFO:root:hidden_units: 256
+INFO:root:batch_size: 256
+INFO:root:timeout: 1000
+INFO:root:gamma: 0.99
+INFO:root:use_target_network: 1
+INFO:root:target_network_update_freq: 1
+INFO:root:polyak: 0.995
+INFO:root:evaluation_criteria: return
+INFO:root:device: cuda
+INFO:root:info: 0
+INFO:root:exp_path: /home/swaminathan/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run
+INFO:root:tensorboard_logs: True
+/home/swaminathan/anaconda3/envs/inac/lib/python3.9/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+/home/swaminathan/anaconda3/envs/inac/lib/python3.9/site-packages/torch/cuda/__init__.py:143: UserWarning:
+NVIDIA GeForce RTX 3060 Laptop GPU with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 sm_75 compute_37.
+If you want to use the NVIDIA GeForce RTX 3060 Laptop GPU GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+2024-01-31 01:33:48,899 | seed: 0
+2024-01-31 01:33:48,899 | env_name: Ant
+2024-01-31 01:33:48,899 | dataset: expert
+2024-01-31 01:33:48,899 | discrete_control: 0
+2024-01-31 01:33:48,900 | state_dim: 111
+2024-01-31 01:33:48,900 | action_dim: 8
+2024-01-31 01:33:48,900 | tau: 0.01
+2024-01-31 01:33:48,900 | max_steps: 1000000
+2024-01-31 01:33:48,900 | log_interval: 10000
+2024-01-31 01:33:48,901 | learning_rate: 0.0003
+2024-01-31 01:33:48,901 | hidden_units: 256
+2024-01-31 01:33:48,901 | batch_size: 256
+2024-01-31 01:33:48,901 | timeout: 1000
+2024-01-31 01:33:48,901 | gamma: 0.99
+2024-01-31 01:33:48,902 | use_target_network: 1
+2024-01-31 01:33:48,902 | target_network_update_freq: 1
+2024-01-31 01:33:48,902 | polyak: 0.995
+2024-01-31 01:33:48,902 | evaluation_criteria: return
+2024-01-31 01:33:48,902 | device: cuda
+2024-01-31 01:33:48,903 | info: 0
+2024-01-31 01:33:48,903 | exp_path: /home/swaminathan/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run

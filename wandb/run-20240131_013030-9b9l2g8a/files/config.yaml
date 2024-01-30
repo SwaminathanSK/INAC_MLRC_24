@@ -1,0 +1,92 @@
+wandb_version: 1
+
+seed:
+  desc: null
+  value: 0
+env_name:
+  desc: null
+  value: Ant
+dataset:
+  desc: null
+  value: expert
+discrete_control:
+  desc: null
+  value: 0
+state_dim:
+  desc: null
+  value: 111
+action_dim:
+  desc: null
+  value: 8
+tau:
+  desc: null
+  value: 0.01
+max_steps:
+  desc: null
+  value: 1000000
+log_interval:
+  desc: null
+  value: 10000
+learning_rate:
+  desc: null
+  value: 0.0003
+hidden_units:
+  desc: null
+  value: 256
+batch_size:
+  desc: null
+  value: 256
+timeout:
+  desc: null
+  value: 1000
+gamma:
+  desc: null
+  value: 0.99
+use_target_network:
+  desc: null
+  value: 1
+target_network_update_freq:
+  desc: null
+  value: 1
+polyak:
+  desc: null
+  value: 0.995
+evaluation_criteria:
+  desc: null
+  value: return
+device:
+  desc: null
+  value: cuda
+info:
+  desc: null
+  value: '0'
+exp_path:
+  desc: null
+  value: /home/swaminathan/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run
+tensorboard_logs:
+  desc: null
+  value: true
+_wandb:
+  desc: null
+  value:
+    python_version: 3.9.18
+    cli_version: 0.16.2
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1706644830.165434
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.9.18
+      5: 0.16.2
+      8:
+      - 5
+      13: linux-x86_64

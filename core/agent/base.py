@@ -96,7 +96,7 @@ class Agent:
         self.action_dim = action_dim
 
         self.gamma = gamma
-        self.device = 'cpu'
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.stats_queue_size = 5
         self.episode_reward = 0
         self.episode_rewards = []
