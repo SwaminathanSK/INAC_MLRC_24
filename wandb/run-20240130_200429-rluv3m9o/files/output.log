@@ -1,0 +1,112 @@
+2024-01-30 20:04:32,360 | seed: 0
+2024-01-30 20:04:32,361 | env_name: Ant
+2024-01-30 20:04:32,361 | dataset: medexp
+2024-01-30 20:04:32,361 | discrete_control: 0
+2024-01-30 20:04:32,362 | state_dim: 111
+2024-01-30 20:04:32,362 | action_dim: 8
+2024-01-30 20:04:32,362 | tau: 0.01
+2024-01-30 20:04:32,362 | max_steps: 1000
+2024-01-30 20:04:32,362 | log_interval: 100
+2024-01-30 20:04:32,363 | learning_rate: 0.0003
+2024-01-30 20:04:32,363 | hidden_units: 256
+2024-01-30 20:04:32,363 | batch_size: 256
+2024-01-30 20:04:32,363 | timeout: 1000
+2024-01-30 20:04:32,363 | gamma: 0.99
+2024-01-30 20:04:32,364 | use_target_network: 1
+2024-01-30 20:04:32,364 | target_network_update_freq: 1
+2024-01-30 20:04:32,364 | polyak: 0.995
+2024-01-30 20:04:32,364 | evaluation_criteria: return
+2024-01-30 20:04:32,365 | device: cpu
+2024-01-30 20:04:32,365 | info: 0
+2024-01-30 20:04:32,365 | exp_path: /home/swaminathan/git/INAC_MLRC_24/data/output/Ant/medexp/0/0_run
+2024-01-30 20:04:32,365 | tensorboard_logs: True
+INFO:root:seed: 0
+INFO:root:env_name: Ant
+INFO:root:dataset: medexp
+INFO:root:discrete_control: 0
+INFO:root:state_dim: 111
+INFO:root:action_dim: 8
+INFO:root:tau: 0.01
+INFO:root:max_steps: 1000
+INFO:root:log_interval: 100
+INFO:root:learning_rate: 0.0003
+INFO:root:hidden_units: 256
+INFO:root:batch_size: 256
+INFO:root:timeout: 1000
+INFO:root:gamma: 0.99
+INFO:root:use_target_network: 1
+INFO:root:target_network_update_freq: 1
+INFO:root:polyak: 0.995
+INFO:root:evaluation_criteria: return
+INFO:root:device: cpu
+INFO:root:info: 0
+INFO:root:exp_path: /home/swaminathan/git/INAC_MLRC_24/data/output/Ant/medexp/0/0_run
+INFO:root:tensorboard_logs: True
+/home/swaminathan/anaconda3/envs/inac/lib/python3.9/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+2024-01-30 20:04:35,980 | TRAIN LOG: steps 0, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 60.93 steps/s
+INFO:root:TRAIN LOG: steps 0, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 60.93 steps/s
+2024-01-30 20:04:37,643 | TEST LOG: steps 0, episodes   0, returns 901.14/901.37/888.10/908.22/5 (mean/median/min/max/num), 60.93 steps/s
+2024-01-30 20:04:37,643 | Normalized LOG: steps 0, episodes   0, returns 0.29/0.29/0.29/0.29/5 (mean/median/min/max/num), 60.93 steps/s
+INFO:root:TEST LOG: steps 0, episodes   0, returns 901.14/901.37/888.10/908.22/5 (mean/median/min/max/num), 60.93 steps/s
+INFO:root:Normalized LOG: steps 0, episodes   0, returns 0.29/0.29/0.29/0.29/5 (mean/median/min/max/num), 60.93 steps/s
+2024-01-30 20:04:39,104 | TRAIN LOG: steps 100, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 68.47 steps/s
+INFO:root:TRAIN LOG: steps 100, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 68.47 steps/s
+2024-01-30 20:04:40,775 | TEST LOG: steps 100, episodes   0, returns 799.60/787.01/783.45/833.36/5 (mean/median/min/max/num), 68.47 steps/s
+2024-01-30 20:04:40,775 | Normalized LOG: steps 100, episodes   0, returns 0.27/0.26/0.26/0.28/5 (mean/median/min/max/num), 68.47 steps/s
+2024-01-30 20:04:42,274 | TRAIN LOG: steps 200, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 66.76 steps/s
+INFO:root:TEST LOG: steps 100, episodes   0, returns 799.60/787.01/783.45/833.36/5 (mean/median/min/max/num), 68.47 steps/s
+INFO:root:Normalized LOG: steps 100, episodes   0, returns 0.27/0.26/0.26/0.28/5 (mean/median/min/max/num), 68.47 steps/s
+INFO:root:TRAIN LOG: steps 200, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 66.76 steps/s
+2024-01-30 20:04:44,046 | TEST LOG: steps 200, episodes   0, returns 811.05/795.49/782.46/881.19/5 (mean/median/min/max/num), 66.76 steps/s
+2024-01-30 20:04:44,046 | Normalized LOG: steps 200, episodes   0, returns 0.27/0.27/0.26/0.29/5 (mean/median/min/max/num), 66.76 steps/s
+INFO:root:TEST LOG: steps 200, episodes   0, returns 811.05/795.49/782.46/881.19/5 (mean/median/min/max/num), 66.76 steps/s
+INFO:root:Normalized LOG: steps 200, episodes   0, returns 0.27/0.27/0.26/0.29/5 (mean/median/min/max/num), 66.76 steps/s
+2024-01-30 20:04:45,483 | TRAIN LOG: steps 300, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 69.63 steps/s
+INFO:root:TRAIN LOG: steps 300, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 69.63 steps/s
+2024-01-30 20:04:47,124 | TEST LOG: steps 300, episodes   0, returns 710.82/695.15/622.74/818.58/5 (mean/median/min/max/num), 69.63 steps/s
+2024-01-30 20:04:47,125 | Normalized LOG: steps 300, episodes   0, returns 0.25/0.24/0.23/0.27/5 (mean/median/min/max/num), 69.63 steps/s
+INFO:root:TEST LOG: steps 300, episodes   0, returns 710.82/695.15/622.74/818.58/5 (mean/median/min/max/num), 69.63 steps/s
+INFO:root:Normalized LOG: steps 300, episodes   0, returns 0.25/0.24/0.23/0.27/5 (mean/median/min/max/num), 69.63 steps/s
+2024-01-30 20:04:48,509 | TRAIN LOG: steps 400, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.26 steps/s
+2024-01-30 20:04:50,182 | TEST LOG: steps 400, episodes   0, returns 534.27/530.78/440.45/653.04/5 (mean/median/min/max/num), 72.26 steps/s
+2024-01-30 20:04:50,182 | Normalized LOG: steps 400, episodes   0, returns 0.20/0.20/0.18/0.23/5 (mean/median/min/max/num), 72.26 steps/s
+INFO:root:TRAIN LOG: steps 400, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.26 steps/s
+INFO:root:TEST LOG: steps 400, episodes   0, returns 534.27/530.78/440.45/653.04/5 (mean/median/min/max/num), 72.26 steps/s
+INFO:root:Normalized LOG: steps 400, episodes   0, returns 0.20/0.20/0.18/0.23/5 (mean/median/min/max/num), 72.26 steps/s
+2024-01-30 20:04:51,558 | TRAIN LOG: steps 500, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.70 steps/s
+INFO:root:TRAIN LOG: steps 500, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.70 steps/s
+2024-01-30 20:04:53,230 | TEST LOG: steps 500, episodes   0, returns 450.86/439.57/438.06/489.36/5 (mean/median/min/max/num), 72.70 steps/s
+2024-01-30 20:04:53,230 | Normalized LOG: steps 500, episodes   0, returns 0.18/0.18/0.18/0.19/5 (mean/median/min/max/num), 72.70 steps/s
+INFO:root:TEST LOG: steps 500, episodes   0, returns 450.86/439.57/438.06/489.36/5 (mean/median/min/max/num), 72.70 steps/s
+INFO:root:Normalized LOG: steps 500, episodes   0, returns 0.18/0.18/0.18/0.19/5 (mean/median/min/max/num), 72.70 steps/s
+2024-01-30 20:04:54,712 | TRAIN LOG: steps 600, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 67.49 steps/s
+2024-01-30 20:04:56,398 | TEST LOG: steps 600, episodes   0, returns 486.19/424.92/334.83/777.45/5 (mean/median/min/max/num), 67.49 steps/s
+2024-01-30 20:04:56,398 | Normalized LOG: steps 600, episodes   0, returns 0.19/0.18/0.16/0.26/5 (mean/median/min/max/num), 67.49 steps/s
+INFO:root:TRAIN LOG: steps 600, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 67.49 steps/s
+INFO:root:TEST LOG: steps 600, episodes   0, returns 486.19/424.92/334.83/777.45/5 (mean/median/min/max/num), 67.49 steps/s
+INFO:root:Normalized LOG: steps 600, episodes   0, returns 0.19/0.18/0.16/0.26/5 (mean/median/min/max/num), 67.49 steps/s
+2024-01-30 20:04:57,788 | TRAIN LOG: steps 700, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.00 steps/s
+INFO:root:TRAIN LOG: steps 700, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.00 steps/s
+2024-01-30 20:04:59,461 | TEST LOG: steps 700, episodes   0, returns 682.87/595.29/506.10/1105.17/5 (mean/median/min/max/num), 72.00 steps/s
+2024-01-30 20:04:59,462 | Normalized LOG: steps 700, episodes   0, returns 0.24/0.22/0.20/0.34/5 (mean/median/min/max/num), 72.00 steps/s
+INFO:root:TEST LOG: steps 700, episodes   0, returns 682.87/595.29/506.10/1105.17/5 (mean/median/min/max/num), 72.00 steps/s
+INFO:root:Normalized LOG: steps 700, episodes   0, returns 0.24/0.22/0.20/0.34/5 (mean/median/min/max/num), 72.00 steps/s
+2024-01-30 20:05:00,871 | TRAIN LOG: steps 800, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 70.99 steps/s
+INFO:root:TRAIN LOG: steps 800, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 70.99 steps/s
+2024-01-30 20:05:02,581 | TEST LOG: steps 800, episodes   0, returns 502.22/451.78/71.20/882.46/5 (mean/median/min/max/num), 70.99 steps/s
+2024-01-30 20:05:02,582 | Normalized LOG: steps 800, episodes   0, returns 0.20/0.18/0.09/0.29/5 (mean/median/min/max/num), 70.99 steps/s
+2024-01-30 20:05:03,960 | TRAIN LOG: steps 900, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.59 steps/s
+INFO:root:TEST LOG: steps 800, episodes   0, returns 502.22/451.78/71.20/882.46/5 (mean/median/min/max/num), 70.99 steps/s
+INFO:root:Normalized LOG: steps 800, episodes   0, returns 0.20/0.18/0.09/0.29/5 (mean/median/min/max/num), 70.99 steps/s
+INFO:root:TRAIN LOG: steps 900, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 72.59 steps/s
+2024-01-30 20:05:05,571 | TEST LOG: steps 900, episodes   0, returns 1634.69/718.78/407.98/3795.84/5 (mean/median/min/max/num), 72.59 steps/s
+2024-01-30 20:05:05,572 | Normalized LOG: steps 900, episodes   0, returns 0.47/0.25/0.17/0.98/5 (mean/median/min/max/num), 72.59 steps/s
+INFO:root:TEST LOG: steps 900, episodes   0, returns 1634.69/718.78/407.98/3795.84/5 (mean/median/min/max/num), 72.59 steps/s
+INFO:root:Normalized LOG: steps 900, episodes   0, returns 0.47/0.25/0.17/0.98/5 (mean/median/min/max/num), 72.59 steps/s
+2024-01-30 20:05:07,044 | TRAIN LOG: steps 1000, episodes   1, returns 724.00/906.87/0.00/909.13/5 (mean/median/min/max/num), 67.97 steps/s
+INFO:root:TRAIN LOG: steps 1000, episodes   1, returns 724.00/906.87/0.00/909.13/5 (mean/median/min/max/num), 67.97 steps/s
+2024-01-30 20:05:08,481 | TEST LOG: steps 1000, episodes   1, returns 952.25/1108.63/148.54/2029.99/5 (mean/median/min/max/num), 67.97 steps/s
+2024-01-30 20:05:08,482 | Normalized LOG: steps 1000, episodes   1, returns 0.30/0.34/0.11/0.56/5 (mean/median/min/max/num), 67.97 steps/s
+INFO:root:TEST LOG: steps 1000, episodes   1, returns 952.25/1108.63/148.54/2029.99/5 (mean/median/min/max/num), 67.97 steps/s
+INFO:root:Normalized LOG: steps 1000, episodes   1, returns 0.30/0.34/0.11/0.56/5 (mean/median/min/max/num), 67.97 steps/s

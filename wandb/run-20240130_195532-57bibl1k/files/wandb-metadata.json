@@ -1,0 +1,155 @@
+{
+    "os": "Linux-5.15.0-91-generic-x86_64-with-glibc2.31",
+    "python": "3.9.18",
+    "heartbeatAt": "2024-01-30T14:25:35.162346",
+    "startedAt": "2024-01-30T14:25:32.589004",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--seed",
+        "0",
+        "--env_name",
+        "Ant",
+        "--dataset",
+        "medexp",
+        "--discrete_control",
+        "0",
+        "--state_dim",
+        "111",
+        "--action_dim",
+        "8",
+        "--tau",
+        "0.01",
+        "--learning_rate",
+        "0.0003",
+        "--hidden_units",
+        "256",
+        "--batch_size",
+        "256",
+        "--timeout",
+        "1000",
+        "--max_steps",
+        "1000",
+        "--log_interval",
+        "100"
+    ],
+    "state": "running",
+    "program": "/home/swaminathan/git/INAC_MLRC_24/run_ac_offline.py",
+    "codePathLocal": "run_ac_offline.py",
+    "codePath": "run_ac_offline.py",
+    "git": {
+        "remote": "https://github.com/SwaminathanSK/INAC_MLRC_24.git",
+        "commit": "538fe009cb39ac5b8347528dc0f604c7e79335cf"
+    },
+    "email": "swamisathya2004@gmail.com",
+    "root": "/home/swaminathan/git/INAC_MLRC_24",
+    "host": "swaminathan-ASUS-TUF-Dash-F15-FX517ZM-FX517ZM",
+    "username": "swaminathan",
+    "executable": "/home/swaminathan/anaconda3/envs/inac/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2630.3806875,
+        "min": 400.0,
+        "max": 4350.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 1586.091,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4700.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2700.0,
+            "min": 400.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 147.33804321289062,
+            "used": 106.51498031616211
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.243606567382812
+    }
+}

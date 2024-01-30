@@ -41,7 +41,8 @@ class Logger:
             self.attrs = dict(config.__dict__)
             for k in ['env_fn', 'offline_data']:
                 del self.attrs[k]
-            self.run = wandb.init(project="inacTestRun", config=self.attrs)
+            wandb.login("ab2b40ca778eb2262c7ad70b4887b9a82110f794")
+            self.run = wandb.init(project="newProject", config=self.attrs)
 
     def info(self, log_msg):
         self._logger.info(log_msg)

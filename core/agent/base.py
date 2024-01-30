@@ -260,19 +260,27 @@ class Agent:
                                         elapsed_time))
         return mean, median, min_, max_
 
-    def log_file(self, elapsed_time=-1, test=True):
+    def log_file(self, elapsed_time=-1, test=True, config=None):
         mean, median, min_, max_ = self.log_return(self.ep_returns_queue_train, "TRAIN", elapsed_time)
+        run_type = "Train"
+        config.logger.run.log({f"{run_type}_mean" : mean, f"{run_type}_median" : median, f"{run_type}_min" : min_, f"{run_type}_max" : max_, f"{run_type}_steps" : elapsed_time})
+        
         if test:
+            run_type = "Test"
             self.populate_states, self.populate_actions, self.populate_true_qs = self.populate_returns(log_traj=True)
             self.populate_latest = True
             mean, median, min_, max_ = self.log_return(self.ep_returns_queue_test, "TEST", elapsed_time)
-
+            config.logger.run.log({f"{run_type}_mean" : mean, f"{run_type}_median" : median, f"{run_type}_min" : min_, f"{run_type}_max" : max_, f"{run_type}_steps" : elapsed_time})
+            
             try:
+                run_type = "Normalized"
                 normalized = np.array([self.eval_env.env.unwrapped.get_normalized_score(ret_) for ret_ in self.ep_returns_queue_test])
                 mean, median, min_, max_ = self.log_return(normalized, "Normalized", elapsed_time)
+                config.logger.run.log({f"{run_type}_mean" : mean, f"{run_type}_median" : median, f"{run_type}_min" : min_, f"{run_type}_max" : max_, f"{run_type}_steps" : elapsed_time})
+
             except:
                 pass
-        return mean, median, min_, max_
+        return mean, median, min_, max_, run_type
 
     def policy(self, o, eval=False):
         o = torch_utils.tensor(self.state_normalizer(o), self.device)
