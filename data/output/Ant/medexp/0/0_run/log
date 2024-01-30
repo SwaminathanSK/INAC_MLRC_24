@@ -1,0 +1,28 @@
+2024-01-24 13:50:30,446 | seed: 0
+2024-01-24 13:50:30,446 | env_name: Ant
+2024-01-24 13:50:30,446 | dataset: medexp
+2024-01-24 13:50:30,446 | discrete_control: 0
+2024-01-24 13:50:30,446 | state_dim: 111
+2024-01-24 13:50:30,446 | action_dim: 8
+2024-01-24 13:50:30,446 | tau: 0.01
+2024-01-24 13:50:30,446 | max_steps: 10000
+2024-01-24 13:50:30,446 | log_interval: 10000
+2024-01-24 13:50:30,446 | learning_rate: 0.0003
+2024-01-24 13:50:30,446 | hidden_units: 256
+2024-01-24 13:50:30,446 | batch_size: 256
+2024-01-24 13:50:30,446 | timeout: 1000
+2024-01-24 13:50:30,446 | gamma: 0.99
+2024-01-24 13:50:30,446 | use_target_network: 1
+2024-01-24 13:50:30,446 | target_network_update_freq: 1
+2024-01-24 13:50:30,446 | polyak: 0.995
+2024-01-24 13:50:30,446 | evaluation_criteria: return
+2024-01-24 13:50:30,446 | device: cpu
+2024-01-24 13:50:30,446 | info: 0
+2024-01-24 13:50:30,446 | exp_path: /home/swaminathan/inac_pytorch/data/output/Ant/medexp/0/0_run
+2024-01-24 13:50:30,446 | tensorboard_logs: True
+2024-01-24 13:50:33,980 | TRAIN LOG: steps 0, episodes   0, returns 907.52/908.20/895.82/917.60/5 (mean/median/min/max/num), 5955.27 steps/s
+2024-01-24 13:50:35,676 | TEST LOG: steps 0, episodes   0, returns 901.14/901.37/888.10/908.22/5 (mean/median/min/max/num), 5955.27 steps/s
+2024-01-24 13:50:35,676 | Normalized LOG: steps 0, episodes   0, returns 0.29/0.29/0.29/0.29/5 (mean/median/min/max/num), 5955.27 steps/s
+2024-01-24 13:53:08,209 | TRAIN LOG: steps 10000, episodes  10, returns 0.00/0.00/0.00/0.00/5 (mean/median/min/max/num), 65.56 steps/s
+2024-01-24 13:53:08,954 | TEST LOG: steps 10000, episodes  10, returns 1415.50/1062.66/798.42/2798.12/5 (mean/median/min/max/num), 65.56 steps/s
+2024-01-24 13:53:08,954 | Normalized LOG: steps 10000, episodes  10, returns 0.41/0.33/0.27/0.74/5 (mean/median/min/max/num), 65.56 steps/s
