@@ -47,6 +47,7 @@ if __name__ == '__main__':
     cfg.tensorboard_logs = True
 
     cfg.logger = logger.Logger(cfg, cfg.exp_path)
+    cfg.device = "cuda" if torch.cuda.is_available() else "cpu"
     logger.log_config(cfg)
 
     # Initializing the agent and running the experiment
