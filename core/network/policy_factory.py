@@ -12,6 +12,9 @@ from core.utils import torch_utils
 class MLPCont(nn.Module):
     def __init__(self, device, obs_dim, act_dim, hidden_sizes, action_range=1.0, init_type='xavier'):
         super().__init__()
+
+        device = "cuda"
+        
         self.device = device
         body = network_bodies.FCBody(device, obs_dim, hidden_units=tuple(hidden_sizes), init_type=init_type)
         body_out = obs_dim if hidden_sizes==[] else hidden_sizes[-1]
