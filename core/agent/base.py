@@ -136,6 +136,7 @@ class Agent:
 
     def get_data(self):
         states, actions, rewards, next_states, terminals = self.replay.sample()
+        actions = torch_utils.tensor(actions, self.device)
         in_ = torch_utils.tensor(self.state_normalizer(states), self.device)
         r = torch_utils.tensor(rewards, self.device)
         ns = torch_utils.tensor(self.state_normalizer(next_states), self.device)
@@ -159,6 +160,7 @@ class Agent:
         # trans = self.feed_data()
         self.update_stats(0, None)
         data = self.get_data()
+
         losses = self.update(data)
         return losses
     
