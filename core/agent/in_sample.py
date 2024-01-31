@@ -48,9 +48,11 @@ class InSampleAC(base.Agent):
             if discrete_control:
                 device = "cuda"
                 pi = MLPDiscrete(device, state_dim, action_dim, [hidden_units]*2)
+                pi.to("device")
             else:
                 device = "cuda"
                 pi = MLPCont(device, state_dim, action_dim, [hidden_units]*2)
+                pi.to("cuda")
             return pi
 
         def get_critic_func():
