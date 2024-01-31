@@ -120,7 +120,7 @@ class InSampleAC(base.Agent):
             min_Q, _, _ = self.get_q_value_target(states, actions)
         target = min_Q - self.tau * log_probs
         value_loss = (0.5 * (v_phi - target) ** 2).mean()
-        return value_loss, v_phi.detach().numpy(), log_probs.detach().numpy()
+        return value_loss, v_phi.detach().cpu().numpy(), log_probs.detach().cpu().numpy()
     
     def get_state_value(self, state):
         with torch.no_grad():
