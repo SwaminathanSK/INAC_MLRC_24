@@ -70,9 +70,14 @@ class InSampleAC(base.Agent):
         AC = namedtuple('AC', ['q1q2', 'pi'])
         self.ac = AC(q1q2=q1q2, pi=pi)
         pi_target = get_policy_func()
+        
         q1q2_target = get_critic_func()
         q1q2_target.load_state_dict(q1q2.state_dict())
+
         pi_target.load_state_dict(pi.state_dict())
+
+        pi_target.to(device)
+        q1q2_target.to(device)
         ACTarg = namedtuple('ACTarg', ['q1q2', 'pi'])
         self.ac_targ = ACTarg(q1q2=q1q2_target, pi=pi_target)
         self.ac_targ.q1q2.load_state_dict(self.ac.q1q2.state_dict())
