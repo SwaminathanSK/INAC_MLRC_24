@@ -143,7 +143,7 @@ class InSampleAC(base.Agent):
         critic1_loss = (0.5 * (q_target - q1) ** 2).mean()
         critic2_loss = (0.5 * (q_target - q2) ** 2).mean()
         loss_q = (critic1_loss + critic2_loss) * 0.5
-        q_info = minq.detach().numpy()
+        q_info = minq.detach().cpu().numpy()
         return loss_q, q_info
 
     def compute_loss_pi(self, data):
