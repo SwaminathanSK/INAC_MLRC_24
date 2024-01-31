@@ -67,6 +67,10 @@ class InSampleAC(base.Agent):
         device = "cuda"
         pi = get_policy_func()
         q1q2 = get_critic_func()
+
+        pi.to(device)
+        q1q2.to(device)
+
         AC = namedtuple('AC', ['q1q2', 'pi'])
         self.ac = AC(q1q2=q1q2, pi=pi)
         pi_target = get_policy_func()
