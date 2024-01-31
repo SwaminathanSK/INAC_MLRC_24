@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser.add_argument('--target_network_update_freq', default=1, type=int)
     parser.add_argument('--polyak', default=0.995, type=float)
     parser.add_argument('--evaluation_criteria', default='return', type=str)
-    parser.add_argument('--device', default='cpu', type=str)
+    parser.add_argument('--device', default='cuda', type=str)
     parser.add_argument('--info', default='0', type=str)
     cfg = parser.parse_args()
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
     cfg.tensorboard_logs = True
 
     cfg.logger = logger.Logger(cfg, cfg.exp_path)
-    cfg.device = "cuda" if torch.cuda.is_available() else "cpu"
+    cfg.device = "cuda"
     logger.log_config(cfg)
 
     # Initializing the agent and running the experiment

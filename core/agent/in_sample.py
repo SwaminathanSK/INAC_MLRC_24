@@ -46,18 +46,23 @@ class InSampleAC(base.Agent):
         
         def get_policy_func():
             if discrete_control:
+                device = "cuda"
                 pi = MLPDiscrete(device, state_dim, action_dim, [hidden_units]*2)
             else:
+                device = "cuda"
                 pi = MLPCont(device, state_dim, action_dim, [hidden_units]*2)
             return pi
 
         def get_critic_func():
             if discrete_control:
+                device = "cuda"
                 q1q2 = DoubleCriticDiscrete(device, state_dim, [hidden_units]*2, action_dim)
             else:
+                device = "cuda"
                 q1q2 = DoubleCriticNetwork(device, state_dim, action_dim, [hidden_units]*2)
             return q1q2
-            
+        
+        device = "cuda"
         pi = get_policy_func()
         q1q2 = get_critic_func()
         AC = namedtuple('AC', ['q1q2', 'pi'])

@@ -14,7 +14,7 @@ class MLPCont(nn.Module):
         super().__init__()
 
         device = "cuda"
-        
+
         self.device = device
         body = network_bodies.FCBody(device, obs_dim, hidden_units=tuple(hidden_sizes), init_type=init_type)
         body_out = obs_dim if hidden_sizes==[] else hidden_sizes[-1]
@@ -69,6 +69,9 @@ class MLPCont(nn.Module):
 class MLPDiscrete(nn.Module):
     def __init__(self, device, obs_dim, act_dim, hidden_sizes, init_type='xavier'):
         super().__init__()
+
+        device = "cuda"
+
         self.device = device
         body = network_bodies.FCBody(device, obs_dim, hidden_units=tuple(hidden_sizes), init_type=init_type)
         body_out = obs_dim if hidden_sizes==[] else hidden_sizes[-1]

@@ -9,6 +9,9 @@ from core.network import network_utils
 class FCBody(nn.Module):
     def __init__(self, device, input_dim, hidden_units=(64, 64), activation=functional.relu, init_type='xavier', info=None):
         super().__init__()
+
+        device = "cuda"
+
         self.to(device)
         self.device = device
         dims = (input_dim,) + hidden_units
@@ -40,6 +43,8 @@ class FCBody(nn.Module):
 class ConvBody(nn.Module):
     def __init__(self, device, state_dim, architecture):
         super().__init__()
+
+        device = "device"
 
         def size(size, kernel_size=3, stride=1, padding=0):
             return (size + 2 * padding - (kernel_size - 1) - 1) // stride + 1

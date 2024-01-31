@@ -10,6 +10,9 @@ from core.utils import torch_utils
 class FCNetwork(nn.Module):
     def __init__(self, device, input_units, hidden_units, output_units, head_activation=lambda x:x):
         super().__init__()
+
+        device = "cuda"
+
         body = network_bodies.FCBody(device, input_units, hidden_units=tuple(hidden_units), init_type='xavier')
         self.body = body
         self.fc_head = network_utils.layer_init_xavier(nn.Linear(body.feature_dim, output_units, bias=True), bias=True)
@@ -28,6 +31,9 @@ class FCNetwork(nn.Module):
 class DoubleCriticDiscrete(nn.Module):
     def __init__(self, device, input_units, hidden_units, output_units):
         super().__init__()
+
+        device = "cuda"
+
         self.device = device
         self.q1_net = FCNetwork(device, input_units, hidden_units, output_units)
         self.q2_net = FCNetwork(device, input_units, hidden_units, output_units)
@@ -50,6 +56,9 @@ class DoubleCriticDiscrete(nn.Module):
 class DoubleCriticNetwork(nn.Module):
     def __init__(self, device, num_inputs, num_actions, hidden_units):
         super(DoubleCriticNetwork, self).__init__()
+
+        device = "cuda"
+
         self.device = device
 
         # Q1 architecture

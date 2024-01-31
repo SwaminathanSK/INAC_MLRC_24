@@ -6,6 +6,7 @@ import torch
 def tensor(x, device):
     if isinstance(x, torch.Tensor):
         return x
+    device="cuda"
     x = torch.tensor(x, dtype=torch.float32).to(device)
     return x
 
