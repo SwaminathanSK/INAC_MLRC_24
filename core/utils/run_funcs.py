@@ -53,19 +53,19 @@ def load_testset(env_name, dataset, id):
     
     elif env_name == 'Acrobot':
         if dataset == 'expert':
-            path = {"pkl": "data/dataset/acrobot/transitions_50k/train_40k/{}_run.pkl".format(id)}
+            path = {"pkl": "data/dataset/acrobot/expert/ae_run.pkl"}
         elif dataset == 'mixed':
-            path = {"pkl": "data/dataset/acrobot/transitions_50k/train_mixed/{}_run.pkl".format(id)}
+            path = {"pkl": "data/dataset/acrobot/mixed/am_run.pkl"}
     elif env_name == 'LunarLander':
         if dataset == 'expert':
-            path = {"pkl": "data/dataset/lunar_lander/transitions_50k/train_500k/{}_run.pkl".format(id)}
+            path = {"pkl": "data/dataset/lunar_lander/expert/le_run.pkl"}
         elif dataset == 'mixed':
-            path = {"pkl": "data/dataset/lunar_lander/transitions_50k/train_mixed/{}_run.pkl".format(id)}
+            path = {"pkl": "data/dataset/lunar_lander/mixed/lm_run.pkl"}
     elif env_name == 'MountainCar':
         if dataset == 'expert':
-            path = {"pkl": "data/dataset/mountain_car/transitions_50k/train_60k/{}_run.pkl".format(id)}
+            path = {"pkl": "data/dataset/mountain_car/expert/me_run.pkl"}
         elif dataset == 'mixed':
-            path = {"pkl": "data/dataset/mountain_car/transitions_50k/train_mixed/{}_run.pkl".format(id)}
+            path = {"pkl": "data/dataset/mountain_car/mixed/mm_run.pkl"}
     
     assert path is not None
     testsets = {}
@@ -86,7 +86,7 @@ def load_testset(env_name, dataset, id):
             }
         else:
             pth = path[name]
-            with open(pth.format(id), 'rb') as f:
+            with open(pth, 'rb') as f:
                 testsets[name] = pickle.load(f)
         
         return testsets
