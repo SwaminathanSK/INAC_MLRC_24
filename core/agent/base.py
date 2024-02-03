@@ -282,10 +282,11 @@ class Agent:
                 mean, median, min_, max_ = self.log_return(normalized, "Normalized", elapsed_time)
                 # config.logger.run.log({f"{run_type}_mean" : mean, f"{run_type}_median" : median, f"{run_type}_min" : min_, f"{run_type}_max" : max_, f"{run_type}_steps" : elapsed_time})
                 normalized_mean, normalized_median, normalized_min_, normalized_max_ = (mean, median, min_, max_)
+                config.logger.run.log({"Normalized_mean" : normalized_mean, "Normalized_median" : normalized_median, "Normalized_min" : normalized_min_, "Normalized_max" : normalized_max_, "train_mean" : train_mean, "train_median" : train_median, "train_min_" : train_min_, "train_max_" : train_max_, "test_mean": test_mean, "test_median" : test_median, "test_max_" : test_max_, "test_min_": test_min_,"steps" : elapsed_time})
             except:
                 pass
         
-            config.logger.run.log({"Normalized_mean" : normalized_mean, "Normalized_median" : normalized_median, "Normalized_min" : normalized_min_, "Normalized_max" : normalized_max_, "train_mean" : train_mean, "train_median" : train_median, "train_min_" : train_min_, "train_max_" : train_max_, "test_mean": test_mean, "test_median" : test_median, "test_max_" : test_max_, "test_min_": test_min_,"steps" : elapsed_time})
+            config.logger.run.log({"train_mean" : train_mean, "train_median" : train_median, "train_min_" : train_min_, "train_max_" : train_max_, "test_mean": test_mean, "test_median" : test_median, "test_max_" : test_max_, "test_min_": test_min_,"steps" : elapsed_time})
         else:
             config.logger.run.log({"train_mean" : train_mean, "train_median" : train_median, "train_min_" : train_min_, "train_max_" : train_max_,"steps" : elapsed_time})
 
