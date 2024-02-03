@@ -305,7 +305,7 @@ class Agent:
     def training_set_construction(self, data_dict):
         assert len(list(data_dict.keys())) == 1
         print(data_dict.keys())
-        assert list(data_dict.keys())[0] == "env"
+        # assert list(data_dict.keys())[0] == "env"
         data_dict = data_dict[list(data_dict.keys())[0]]
         print(data_dict.keys())
         states = data_dict['states']
