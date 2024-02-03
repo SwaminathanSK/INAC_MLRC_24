@@ -48,7 +48,7 @@ class InSampleAC(base.Agent):
             if discrete_control:
                 device = "cuda"
                 pi = MLPDiscrete(device, state_dim, action_dim, [hidden_units]*2)
-                pi.to("device")
+                pi.to("cuda")
             else:
                 device = "cuda"
                 pi = MLPCont(device, state_dim, action_dim, [hidden_units]*2)
