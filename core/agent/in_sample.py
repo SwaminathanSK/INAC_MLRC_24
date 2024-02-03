@@ -201,7 +201,7 @@ class InSampleAC(base.Agent):
     def get_q_value_discrete(self, o, a, with_grad=False):
         if with_grad:
             q1_pi, q2_pi = self.ac.q1q2(o)
-            q1_pi, q2_pi = q1_pi[np.arange(len(a)), np.array(a)], q2_pi[np.arange(len(a)), np.array(a)]
+            q1_pi, q2_pi = q1_pi[np.arange(len(a)), np.array(a.cpu())], q2_pi[np.arange(len(a)), np.array(a.cpu())]
             q_pi = torch.min(q1_pi, q2_pi)
         else:
             with torch.no_grad():
