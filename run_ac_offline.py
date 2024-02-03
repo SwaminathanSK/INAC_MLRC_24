@@ -42,6 +42,7 @@ if __name__ == '__main__':
     cfg.env_fn = environment.EnvFactory.create_env_fn(cfg)
     cfg.offline_data = run_funcs.load_testset(cfg.env_name, cfg.dataset, cfg.seed)
     print(cfg.offline_data)
+    print("------------------------------------------------Hello------------------------------------------------")
 
     # Setting up the logger
     # Adding tensorboardX logger
