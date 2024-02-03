@@ -41,6 +41,7 @@ if __name__ == '__main__':
     torch_utils.ensure_dir(cfg.exp_path)
     cfg.env_fn = environment.EnvFactory.create_env_fn(cfg)
     cfg.offline_data = run_funcs.load_testset(cfg.env_name, cfg.dataset, cfg.seed)
+    print(cfg.offline_data)
 
     # Setting up the logger
     # Adding tensorboardX logger
