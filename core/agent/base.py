@@ -293,6 +293,7 @@ class Agent:
         return mean, median, min_, max_, run_type
 
     def policy(self, o, eval=False):
+        print(o)
         o = torch_utils.tensor(self.state_normalizer(o), self.device)
         with torch.no_grad():
             a, _ = self.ac.pi(o, deterministic=eval)
