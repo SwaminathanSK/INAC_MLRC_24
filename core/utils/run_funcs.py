@@ -66,6 +66,15 @@ def load_testset(env_name, dataset, id):
             path = {"pkl": "data/dataset/mountain_car/expert/me_run.pkl"}
         elif dataset == 'mixed':
             path = {"pkl": "data/dataset/mountain_car/mixed/mm_run.pkl"}
+    elif env_name == 'FourRooms':
+        if dataset == 'expert':
+            path = {"pkl": "data/dataset/fourrooms/texpert_run.pkl"}
+        elif dataset == 'mixed':
+            path = {"pkl": "data/dataset/fourrooms/tmixed_run.pkl"}
+        elif dataset == 'missing':
+            path = {"pkl": "data/dataset/fourrooms/tmissing_run.pkl"}
+        elif dataset == 'random':
+            path = {"pkl": "data/dataset/fourrooms/trandom_run.pkl"}
     
     assert path is not None
     testsets = {}
