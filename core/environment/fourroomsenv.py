@@ -41,7 +41,7 @@ class FourRooms:
             self.actionReward.append([])
             for j in range(0, WORLD_SIZE):
                 next = {'R' : [i, j+1], 'L' : [i, j-1], 'D' : [i+1, j], 'U' : [i-1, j]}
-                reward = {'R' : 0, 'L' : 0, 'D' : 0, 'U' : 0}
+                reward = {'R' : -1, 'L' : -1, 'D' : -1, 'U' : -1}
 
                 if [i, j] == leftgap or [i, j] == rightgap:
                     next['R'] = [i, j]
