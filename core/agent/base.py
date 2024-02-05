@@ -136,7 +136,7 @@ class Agent:
 
     def get_data(self):
         states, actions, rewards, next_states, terminals = self.replay.sample()
-        print(states)
+        # print(states)
         actions = torch_utils.tensor(actions, self.device)
         in_ = torch_utils.tensor(self.state_normalizer(states), self.device)
         r = torch_utils.tensor(rewards, self.device)
@@ -149,6 +149,7 @@ class Agent:
             'obs2': ns,
             'done': t
         }
+        print(in_)
         return data
 
     def fill_offline_data_to_buffer(self):
