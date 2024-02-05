@@ -149,7 +149,7 @@ class Agent:
             'obs2': ns,
             'done': t
         }
-        print(in_)
+        # print(in_)
         return data
 
     def fill_offline_data_to_buffer(self):
