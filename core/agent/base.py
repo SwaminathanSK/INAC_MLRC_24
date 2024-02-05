@@ -154,6 +154,7 @@ class Agent:
         self.trainset = self.training_set_construction(self.offline_data)
         train_s, train_a, train_r, train_ns, train_t = self.trainset
         for idx in range(len(train_s)):
+            print(train_s[idx])
             self.replay.feed([train_s[idx], train_a[idx], train_r[idx], train_ns[idx], train_t[idx]])
 
     def step(self):
