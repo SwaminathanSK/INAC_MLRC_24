@@ -157,6 +157,8 @@ class FourRooms:
         reward = self.actionReward[i][j][a]
         if reward == 1:
             done = True
+        else:
+            done = False
 
         # state, reward, done, info = self.step(a)
         return np.asarray(self.state), np.asarray(reward), np.asarray(done), info
