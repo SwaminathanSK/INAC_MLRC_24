@@ -18,12 +18,12 @@ class Replay:
         self.pos = 0
     
     def feed(self, experience):
-        print(self.data)
         if self.pos >= len(self.data):
             self.data.append(experience)
         else:
             self.data[self.pos] = experience
         self.pos = (self.pos + 1) % self.memory_size
+        print(self.data)
     
     def feed_batch(self, experience):
         for exp in experience:
