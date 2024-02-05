@@ -97,7 +97,6 @@ def load_testset(env_name, dataset, id):
             pth = path[name]
             with open(pth, 'rb') as f:
                 testsets[name] = pickle.load(f)
-            print(testsets)
         return testsets
     else:
         return {}
