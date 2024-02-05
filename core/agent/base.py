@@ -18,6 +18,7 @@ class Replay:
         self.pos = 0
     
     def feed(self, experience):
+        print(self.data)
         if self.pos >= len(self.data):
             self.data.append(experience)
         else:
@@ -154,7 +155,7 @@ class Agent:
         self.trainset = self.training_set_construction(self.offline_data)
         train_s, train_a, train_r, train_ns, train_t = self.trainset
         for idx in range(len(train_s)):
-            print(train_s[idx])
+            # print(train_s[idx])
             self.replay.feed([train_s[idx], train_a[idx], train_r[idx], train_ns[idx], train_t[idx]])
 
     def step(self):
@@ -308,19 +309,19 @@ class Agent:
 
     def training_set_construction(self, data_dict):
         assert len(list(data_dict.keys())) == 1
-        print(data_dict.keys())
+        # print(data_dict.keys())
         # assert list(data_dict.keys())[0] == "env"
         data_dict = data_dict[list(data_dict.keys())[0]]
         data_dict = data_dict[list(data_dict.keys())[0]]
-        print(data_dict.keys())
+        # print(data_dict.keys())
         states = data_dict['states']
-        print(states)
+        # print(states)
         actions = data_dict['actions']
-        print(actions)
+        # print(actions)
         rewards = data_dict['rewards']
-        print(rewards)
+        # print(rewards)
         next_states = data_dict['next_states']
         print(next_states)
         terminations = data_dict['terminations']
-        print(terminations)
+        # print(terminations)
         return [states, actions, rewards, next_states, terminations]
