@@ -315,7 +315,11 @@ class Agent:
         states = data_dict['states']
         print(states)
         actions = data_dict['actions']
+        print(actions)
         rewards = data_dict['rewards']
+        print(rewards)
         next_states = data_dict['next_states']
+        print(next_states)
         terminations = data_dict['terminations']
+        print(terminations)
         return [states, actions, rewards, next_states, terminations]
