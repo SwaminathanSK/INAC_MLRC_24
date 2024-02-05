@@ -7,7 +7,6 @@ class FourRooms:
     def __init__(self, start = [10, 0], goal = [0, 10], seed = None, discount = 0.9, WORLD_SIZE = 11):
 
         self._max_episode_steps = np.inf
-        self.state = start
         self.seed = seed
         self.action_dim = 4
         
@@ -145,7 +144,7 @@ class FourRooms:
                 self.li.append((rightgap[0], j))
     
     def reset(self):
-        self = FourRooms()
+        return self.state
     
     def step(self, a):
         a = self.actions[a]

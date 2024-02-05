@@ -224,6 +224,7 @@ class Agent:
     def eval_episode(self, log_traj=False):
         ep_traj = []
         state = self.eval_env.reset()
+        print(state)
         total_rewards = 0
         ep_steps = 0
         done = False
