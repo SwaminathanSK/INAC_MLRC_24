@@ -23,7 +23,6 @@ class Replay:
         else:
             self.data[self.pos] = experience
         self.pos = (self.pos + 1) % self.memory_size
-        print(self.data)
     
     def feed_batch(self, experience):
         for exp in experience:
@@ -137,6 +136,7 @@ class Agent:
 
     def get_data(self):
         states, actions, rewards, next_states, terminals = self.replay.sample()
+        print(states)
         actions = torch_utils.tensor(actions, self.device)
         in_ = torch_utils.tensor(self.state_normalizer(states), self.device)
         r = torch_utils.tensor(rewards, self.device)
