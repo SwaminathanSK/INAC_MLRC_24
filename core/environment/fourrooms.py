@@ -6,7 +6,7 @@ import copy
 
 import core.utils.helpers
 from core.utils.torch_utils import random_seed
-import fourroomsenv
+from core.environment import fourroomsenv
 
 
 class FourRoomsDiscrete:
