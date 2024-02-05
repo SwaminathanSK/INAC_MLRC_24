@@ -14,11 +14,11 @@ class FourRooms:
         self.WORLD_SIZE = WORLD_SIZE
         self.discount = discount
         self.world = np.zeros((WORLD_SIZE, WORLD_SIZE))
+        
 
-        self.start = start
+        self.state = start
         self.goal = goal
         self.li = []
-
 
         # left, up, right, down
         self.actions = ['L', 'U', 'R', 'D']
@@ -101,34 +101,34 @@ class FourRooms:
                 self.actionReward[i].append(reward)
 
 
-        def draw_image(image):
-            fig, ax = plt.subplots()
-            ax.set_axis_off()
-            tb = Table(ax, bbox=[0,0,1,1])
+        # def draw_image(image):
+        #     fig, ax = plt.subplots()
+        #     ax.set_axis_off()
+        #     tb = Table(ax, bbox=[0,0,1,1])
 
-            nrows, ncols = image.shape
-            width, height = 1.0 / ncols, 1.0 / nrows
+        #     nrows, ncols = image.shape
+        #     width, height = 1.0 / ncols, 1.0 / nrows
 
-            # Add cells
-            for (i,j), val in np.ndenumerate(image):
-                # Index either the first or second item of bkg_colors based on
-                # a checker board pattern
-                idx = [j % 2, (j + 1) % 2][i % 2]
-                color = 'white'
+        #     # Add cells
+        #     for (i,j), val in np.ndenumerate(image):
+        #         # Index either the first or second item of bkg_colors based on
+        #         # a checker board pattern
+        #         idx = [j % 2, (j + 1) % 2][i % 2]
+        #         color = 'white'
 
-                tb.add_cell(i, j, width, height, text=val,
-                            loc='center', facecolor=color)
+        #         tb.add_cell(i, j, width, height, text=val,
+        #                     loc='center', facecolor=color)
 
-            # Row Labels...
-            for i, label in enumerate(range(len(image))):
-                tb.add_cell(i, -1, width, height, text=label+1, loc='right',
-                            edgecolor='none', facecolor='none')
-            # Column Labels...
-            for j, label in enumerate(range(len(image))):
-                tb.add_cell(-1, j, width, height/2, text=label+1, loc='center',
-                                edgecolor='none', facecolor='none')
-            ax.add_table(tb)
-            plt.show()
+        #     # Row Labels...
+        #     for i, label in enumerate(range(len(image))):
+        #         tb.add_cell(i, -1, width, height, text=label+1, loc='right',
+        #                     edgecolor='none', facecolor='none')
+        #     # Column Labels...
+        #     for j, label in enumerate(range(len(image))):
+        #         tb.add_cell(-1, j, width, height/2, text=label+1, loc='center',
+        #                         edgecolor='none', facecolor='none')
+        #     ax.add_table(tb)
+        #     plt.show()
 
         # li = []
         ## top wall
@@ -147,13 +147,16 @@ class FourRooms:
     def reset(self):
         self = FourRooms()
     
-    def step(self, a, i, j):
+    def step(self, a):
         a = self.actions[a]
+        i = self.state[0]
+        j = self.state[1]
         newPosition = self.nextState[i][j][a]
-        # bellman equation
+        self.state = newPosition
+        info = None
+        reward = self.actionReward[i][j][a]
+        if reward == 1:
+            done = True
 
-        state, reward, done, info = self.step(a)
-        self.state = state
-        # self.env.render()
-        return newPosition, 
-        return np.asarray(state), np.asarray(reward), np.asarray(done), info
+        # state, reward, done, info = self.step(a)
+        return np.asarray(self.state), np.asarray(reward), np.asarray(done), info

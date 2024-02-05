@@ -12,7 +12,7 @@ import fourroomsenv
 class FourRoomsDiscrete:
     def __init__(self, seed=np.random.randint(int(1e5))):
         random_seed(seed)
-        # self.state_dim = (6,)
+        self.state_dim = (2,)
         self.action_dim = 3
         self.env = fourroomsenv.FourRooms()
         # self.env._seed = seed
