@@ -301,6 +301,7 @@ class Agent:
         return a
 
     def eval_step(self, state):
+        print(state)
         a = self.policy(state, eval=True)
         return a
 
