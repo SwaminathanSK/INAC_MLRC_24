@@ -18,6 +18,7 @@ class FourRooms:
         self.state = start
         self.goal = goal
         self.li = []
+        reward_goal = 1
 
         # left, up, right, down
         self.actions = ['L', 'U', 'R', 'D']
@@ -41,23 +42,23 @@ class FourRooms:
             self.actionReward.append([])
             for j in range(0, WORLD_SIZE):
                 next = {'R' : [i, j+1], 'L' : [i, j-1], 'D' : [i+1, j], 'U' : [i-1, j]}
-                reward = {'R' : -1, 'L' : -1, 'D' : -1, 'U' : -1}
+                reward = {'R' : 0, 'L' : 0, 'D' : 0, 'U' : 0}
 
                 if [i, j] == leftgap or [i, j] == rightgap:
                     next['R'] = [i, j]
                     next['L'] = [i, j]
                     if [i + 1, j] == goal:
-                        reward['D'] = 1.0
+                        reward['D'] = reward_goal
                     if [i - 1, j] == goal:
-                        reward['U'] = 1.0
+                        reward['U'] = reward_goal
 
                 elif [i, j] == upgap or [i, j] == downgap:
                     next['U'] = [i, j]
                     next['D'] = [i, j]
                     if [i, j+1] == goal:
-                        reward['R'] = 1.0
+                        reward['R'] = reward_goal
                     if [i, j-1] == goal:
-                        reward['L'] = 1.0
+                        reward['L'] = reward_goal
 
                 else:
                     if i == leftgap[0]+1 and j != leftgap[1] and j < downgap[1]:
@@ -67,7 +68,7 @@ class FourRooms:
                     elif i == 0:
                         next['U'] = [i, j]
                     elif [i-1, j] == goal:
-                        reward['U'] = 1.0
+                        reward['U'] = reward_goal
 
                     if i == leftgap[0]-1 and j != leftgap[1] and j < upgap[1]:
                         next['D'] = [i, j]
@@ -76,7 +77,7 @@ class FourRooms:
                     elif i == WORLD_SIZE - 1:
                         next['D'] = [i, j]
                     elif [i+1,j] == goal:
-                        reward['D'] = 1.0
+                        reward['D'] = reward_goal
 
                     if j == upgap[1]+1 and i != upgap[0] and i < rightgap[0]:
                         next['L'] = [i, j]
@@ -85,7 +86,7 @@ class FourRooms:
                     elif j == 0:
                         next['L'] = [i, j]
                     elif [i, j-1] == goal:
-                        reward['L'] = 1.0
+                        reward['L'] = reward_goal
 
                     if j == upgap[1]-1 and i != upgap[0] and i < leftgap[0]:
                         next['R'] = [i, j]
@@ -94,7 +95,7 @@ class FourRooms:
                     elif j == WORLD_SIZE - 1:
                         next['R'] = [i, j]
                     elif [i, j+1] == goal:
-                        reward['R'] = 1.0
+                        reward['R'] = reward_goal
 
                 self.nextState[i].append(next)
                 self.actionReward[i].append(reward)
