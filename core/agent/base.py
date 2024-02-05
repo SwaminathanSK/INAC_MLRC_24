@@ -313,6 +313,7 @@ class Agent:
         data_dict = data_dict[list(data_dict.keys())[0]]
         print(data_dict.keys())
         states = data_dict['states']
+        print(states)
         actions = data_dict['actions']
         rewards = data_dict['rewards']
         next_states = data_dict['next_states']
