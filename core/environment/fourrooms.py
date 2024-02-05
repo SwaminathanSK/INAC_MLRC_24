@@ -27,7 +27,7 @@ class FourRoomsDiscrete:
         return self.state
 
     def step(self, a):
-        state, reward, done, info = self.env.step(a)
+        state, reward, done, info = self.env.step(a[0])
         self.state = state
         # self.env.render()
         return np.asarray(state), np.asarray(reward), np.asarray(done), info
