@@ -224,7 +224,6 @@ class Agent:
     def eval_episode(self, log_traj=False):
         ep_traj = []
         state = self.eval_env.reset()
-        print(state)
         total_rewards = 0
         ep_steps = 0
         done = False
@@ -297,7 +296,6 @@ class Agent:
         return mean, median, min_, max_, run_type
 
     def policy(self, o, eval=False):
-        print(o)
         o = torch_utils.tensor(self.state_normalizer(o), self.device)
         with torch.no_grad():
             a, _ = self.ac.pi(o, deterministic=eval)
@@ -305,7 +303,6 @@ class Agent:
         return a
 
     def eval_step(self, state):
-        print(state)
         a = self.policy(state, eval=True)
         return a
 
@@ -323,7 +320,7 @@ class Agent:
         rewards = data_dict['rewards']
         # print(rewards)
         next_states = data_dict['next_states']
-        print(next_states)
+        # print(next_states)
         terminations = data_dict['terminations']
         # print(terminations)
         return [states, actions, rewards, next_states, terminations]

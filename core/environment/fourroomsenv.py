@@ -147,7 +147,6 @@ class FourRooms:
         return self.state
     
     def step(self, a):
-        print(a)
         a = self.actions[a]
         i = self.state[0]
         j = self.state[1]
