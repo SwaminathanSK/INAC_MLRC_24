@@ -162,8 +162,8 @@ class Agent:
         # trans = self.feed_data()
         self.update_stats(0, None)
         data = self.get_data()
-
         losses = self.update(data)
+
         return losses
     
     def update(self, data):
@@ -230,6 +230,7 @@ class Agent:
             action = self.eval_step(state)
             last_state = state
             state, reward, done, _ = self.eval_env.step([action])
+            self.replay.feed([last_state, action, reward, state, done])
             # print(np.abs(state-last_state).sum(), "\n",action)
             if log_traj:
                 ep_traj.append([last_state, action, reward])
