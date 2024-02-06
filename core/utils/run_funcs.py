@@ -96,7 +96,8 @@ def load_testset(env_name, dataset, id):
         else:
             pth = path[name]
             with open(pth, 'rb') as f:
-                testsets[name] = pickle.load(f)
+                dict_temp = pickle.load(f)
+                testsets[name] = dict_temp['env']
         return testsets
     else:
         return {}
