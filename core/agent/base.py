@@ -76,8 +76,10 @@ class Agent:
                  use_target_network,
                  target_network_update_freq,
                  evaluation_criteria,
-                 logger
+                 logger,
+                 discrete_control
                  ):
+        self.discrete_control = discrete_control
         self.exp_path = exp_path
         self.seed = seed
         self.use_target_network = use_target_network
@@ -230,7 +232,8 @@ class Agent:
             action = self.eval_step(state)
             last_state = state
             state, reward, done, _ = self.eval_env.step([action])
-            self.replay.feed([last_state, action, reward, state, done])
+            if self.discrete_control == 3:
+                self.replay.feed([last_state, action, reward, state, done])
             # print(np.abs(state-last_state).sum(), "\n",action)
             if log_traj:
                 ep_traj.append([last_state, action, reward])

@@ -113,7 +113,6 @@ def run_steps(agent, max_steps, log_interval, eval_pth, config):
             t0 = time.time()
             # config.logger.run.log({"mean" : mean, "median" : median, "min" : min_, "max" : max_})
             # config.logger.run.log({f"{run_type}_mean" : mean, f"{run_type}_median" : median, f"{run_type}_min" : min_, f"{run_type}_max" : max_, "steps" : log_interval / (time.time() - t0)})
-        
 
         if max_steps and agent.total_steps >= max_steps:
             break
