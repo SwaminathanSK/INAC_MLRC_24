@@ -232,7 +232,7 @@ class Agent:
             action = self.eval_step(state)
             last_state = state
             state, reward, done, _ = self.eval_env.step([action])
-            if self.discrete_control == 3:
+            if self.discrete_control == 2:
                 self.replay.feed([last_state, action, reward, state, done])
             # print(np.abs(state-last_state).sum(), "\n",action)
             if log_traj:
