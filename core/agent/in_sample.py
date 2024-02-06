@@ -104,14 +104,14 @@ class InSampleAC(base.Agent):
         self.ac_targ.pi.load_state_dict(self.ac.pi.state_dict())
         self.beh_pi = get_policy_func()
 
-        if self.discrete_control == 2:
-            parameters_dir = self.parameters_dir
-            path = os.path.join(parameters_dir, "vs_net.pkl")
-            with open(path, "rb") as file:
-                self.value_net = pickle.load(file)
-            self.value_net.to("cuda")
-        else:
-            self.value_net = FCNetwork(device, np.prod(state_dim), [hidden_units]*2, 1)
+        # if self.discrete_control == 2:
+        #     parameters_dir = self.parameters_dir
+        #     path = os.path.join(parameters_dir, "vs_net.pkl")
+        #     with open(path, "rb") as file:
+        #         self.value_net = pickle.load(file)
+        #     self.value_net.to("cuda")
+        # else:
+        self.value_net = FCNetwork(device, np.prod(state_dim), [hidden_units]*2, 1)
 
         self.pi_optimizer = torch.optim.Adam(list(self.ac.pi.parameters()), learning_rate)
         self.q_optimizer = torch.optim.Adam(list(self.ac.q1q2.parameters()), learning_rate)
