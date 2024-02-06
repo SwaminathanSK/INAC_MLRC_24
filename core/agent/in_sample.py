@@ -3,6 +3,7 @@ from core.agent import base
 from collections import namedtuple
 import os
 import torch
+import pickle
 
 from core.network.policy_factory import MLPCont, MLPDiscrete
 from core.network.network_architectures import DoubleCriticNetwork, DoubleCriticDiscrete, FCNetwork
@@ -45,9 +46,16 @@ class InSampleAC(base.Agent):
         )
         
         def get_policy_func():
-            if discrete_control:
+            if discrete_control == 1:
                 device = "cuda"
                 pi = MLPDiscrete(device, state_dim, action_dim, [hidden_units]*2)
+                pi.to("cuda")
+            elif discrete_control == 2:
+                device = "cuda"
+                parameters_dir = self.parameters_dir
+                path = os.path.join(parameters_dir, "actor_net.pkl")
+                with open(path, "rb") as file:
+                    pi = pickle.load(file)
                 pi.to("cuda")
             else:
                 device = "cuda"
@@ -56,9 +64,16 @@ class InSampleAC(base.Agent):
             return pi
 
         def get_critic_func():
-            if discrete_control:
+            if discrete_control == 1:
                 device = "cuda"
                 q1q2 = DoubleCriticDiscrete(device, state_dim, [hidden_units]*2, action_dim)
+            elif discrete_control == 2:
+                device = "cuda"
+                parameters_dir = self.parameters_dir
+                path = os.path.join(parameters_dir, "critic_net.pkl")
+                with open(path, "rb") as file:
+                    q1q2 = pickle.load(file)
+                q1q2.to("cuda")
             else:
                 device = "cuda"
                 q1q2 = DoubleCriticNetwork(device, state_dim, action_dim, [hidden_units]*2)
@@ -244,14 +259,17 @@ class InSampleAC(base.Agent):
 
     def save(self):
         parameters_dir = self.parameters_dir
-        path = os.path.join(parameters_dir, "actor_net")
-        torch.save(self.ac.pi.state_dict(), path)
-    
-        path = os.path.join(parameters_dir, "critic_net")
-        torch.save(self.ac.q1q2.state_dict(), path)
-    
-        path = os.path.join(parameters_dir, "vs_net")
-        torch.save(self.value_net.state_dict(), path)
+        path = os.path.join(parameters_dir, "actor_net.pkl")
+        with open(path, "wb") as file:
+            pickle.dump(self.ac.pi, file)
+
+        path = os.path.join(parameters_dir, "critic_net.pkl")
+        with open(path, "wb") as file:
+            pickle.dump(self.ac.q1q2, file)
+        
+        path = os.path.join(parameters_dir, "vs_net.pkl")
+        with open(path, "wb") as file:
+            pickle.dump(self.value_net, file)
 
 
 
