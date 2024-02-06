@@ -42,7 +42,8 @@ class InSampleAC(base.Agent):
             use_target_network=use_target_network,
             target_network_update_freq=target_network_update_freq,
             evaluation_criteria=evaluation_criteria,
-            logger=logger
+            logger=logger,
+            discrete_control=discrete_control
         )
         
         def get_policy_func():
