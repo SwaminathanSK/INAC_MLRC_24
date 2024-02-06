@@ -311,7 +311,7 @@ class Agent:
         # print(data_dict.keys())
         # assert list(data_dict.keys())[0] == "env"
         data_dict = data_dict[list(data_dict.keys())[0]]
-        data_dict = data_dict[list(data_dict.keys())[0]]
+        # data_dict = data_dict[list(data_dict.keys())[0]]
         # print(data_dict.keys())
         states = data_dict['states']
         # print(states)
