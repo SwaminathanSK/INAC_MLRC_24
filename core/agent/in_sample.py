@@ -112,6 +112,11 @@ class InSampleAC(base.Agent):
         #     self.value_net.to("cuda")
         # else:
         self.value_net = FCNetwork(device, np.prod(state_dim), [hidden_units]*2, 1)
+        
+        if self.discrete_control == 2:
+            parameters_dir = self.parameters_dir
+            path = os.path.join(parameters_dir, "vs_net")
+            self.value_net.load_state_dict(torch.load(path))
 
         self.pi_optimizer = torch.optim.Adam(list(self.ac.pi.parameters()), learning_rate)
         self.q_optimizer = torch.optim.Adam(list(self.ac.q1q2.parameters()), learning_rate)
@@ -276,9 +281,8 @@ class InSampleAC(base.Agent):
         with open(path, "wb") as file:
             pickle.dump(self.ac.q1q2, file)
         
-        path = os.path.join(parameters_dir, "vs_net.pkl")
-        with open(path, "wb") as file:
-            pickle.dump(self.value_net, file)
+        path = os.path.join(parameters_dir, "vs_net")
+        torch.save(self.value_net.state_dict(), path)
 
 
 
