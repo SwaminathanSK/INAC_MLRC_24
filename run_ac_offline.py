@@ -6,7 +6,7 @@ import core.environment.env_factory as environment
 from core.utils import torch_utils, logger, run_funcs
 from core.agent.in_sample import *
 
-file_ids = {'Hopper': '1O6b4HgPbyFjOfxlGJBbGdfhb0J1yO_pQ', }
+file_ids = {'Ant': '1O6b4HgPbyFjOfxlGJBbGdfhb0J1yO_pQ', 'Hopper': '1L3CPv5R0VPuUxvUjYSfothVOptEVXHUK'}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="run_file")
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     cfg = parser.parse_args()
 
     if(cfg.dataset_method != 'none'):
-        command = f'mkdir -p INAC_MLRC_24/custom_datasets/; cd INAC_MLRC_24/custom_datasets/; gdown {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
+        command = f'mkdir -p custom_datasets/; cd custom_datasets/; gdown {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
         try:
             # Run the command
             result = subprocess.run(command, shell=True, check=True, text=True, capture_output=True)
