@@ -1,4 +1,5 @@
 import pickle
+import h5py
 import time
 import copy
 import numpy as np
@@ -12,7 +13,7 @@ import gzip
 EARLYCUTOFF = "EarlyCutOff"
 
 
-def load_testset(env_name, dataset, id):
+def load_testset(env_name, dataset, id, method, ratio, level):
     path = None
     if env_name == 'HalfCheetah':
         if dataset == 'expert':
@@ -33,7 +34,12 @@ def load_testset(env_name, dataset, id):
         elif dataset == 'medrep':
             path = {"env": "walker2d-medium-replay-v2"}
     elif env_name == 'Hopper':
-        if dataset == 'expert':
+        if method == 'mixed':
+            if level == 'medium':
+                path = {"env": "hopper-medium-v2"}
+            elif level == 'expert':
+                path = {"env": "hopper-expert-v2"}
+        elif dataset == 'expert':
             path = {"env": "hopper-expert-v2"}
         elif dataset == 'medexp':
             path = {"env": "hopper-medium-expert-v2"}
@@ -76,16 +82,28 @@ def load_testset(env_name, dataset, id):
         elif dataset == 'random':
             path = {"pkl": "data/dataset/fourrooms/trandom_run.pkl"}
     
+
     assert path is not None
     testsets = {}
     for name in path:
         if name == "env":
             env = gym.make(path['env'])
             try:
-                data = env.get_dataset()
+                if method == 'none':
+                    data = env.get_dataset()
+                elif method == 'mixed':
+                    file_path = f"custom_datasets/{env_name}/{env_name}-random-{level}-{ratio}-v2.hdf5"
+                    with h5py.File(file_path, 'r') as f:
+                        data = {}
+                        data['observations'] = list(f['observations'][()])
+                        data['actions'] = list(f['actions'][()])
+                        data['rewards'] = list(f['rewards'][()])
+                        data['next_observations'] = list(f['next_observations'][()])
+                        data['terminals'] = list(f['terminals'][()])
             except:
                 env = env.unwrapped
                 data = env.get_dataset()
+
             testsets[name] = {
                 'states': data['observations'],
                 'actions': data['actions'],

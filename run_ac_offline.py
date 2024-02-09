@@ -1,10 +1,12 @@
 import os
 import argparse
+import subprocess
 
 import core.environment.env_factory as environment
 from core.utils import torch_utils, logger, run_funcs
 from core.agent.in_sample import *
 
+file_ids = {'hopper': '1O6b4HgPbyFjOfxlGJBbGdfhb0J1yO_pQ', }
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="run_file")
@@ -29,7 +31,28 @@ if __name__ == '__main__':
     parser.add_argument('--evaluation_criteria', default='return', type=str)
     parser.add_argument('--device', default='cuda', type=str)
     parser.add_argument('--info', default='0', type=str)
+    
+    # new arguments for running imbalanced datasets
+    parser.add_argument('--dataset_method', default='none', type=str)
+    parser.add_argument('--ratio', default=0.05, type=float)
+    parser.add_argument('--dataset_level', default='medium', type=str)
+
     cfg = parser.parse_args()
+
+    if(cfg.dataset_method != 'none'):
+        command = f'mkdir -p INAC_MLRC_24/custom_datasets/; cd INAC_MLRC_24/custom_datasets/; gdown f{file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
+        try:
+            # Run the command
+            result = subprocess.run(command, shell=True, check=True, text=True, capture_output=True)
+
+            # If there is an error, print the error output
+            if result.stderr:
+                print("Error Output:")
+                print(result.stderr)
+            
+        except subprocess.CalledProcessError as e:
+            print(f"Error: {e}")
+
 
     torch_utils.set_one_thread()
 
@@ -40,7 +63,7 @@ if __name__ == '__main__':
     cfg.exp_path = os.path.join(project_root, exp_path)
     torch_utils.ensure_dir(cfg.exp_path)
     cfg.env_fn = environment.EnvFactory.create_env_fn(cfg)
-    cfg.offline_data = run_funcs.load_testset(cfg.env_name, cfg.dataset, cfg.seed)
+    cfg.offline_data = run_funcs.load_testset(cfg.env_name, cfg.dataset, cfg.seed, cfg.dataset_method, cfg.ratio, cfg.dataset_level)
     # print(cfg.offline_data)
     print("------------------------------------------------Hello------------------------------------------------")
 
