@@ -18,7 +18,7 @@ def load_testset(env_name, dataset, id, method, ratio, level):
     if env_name == 'HalfCheetah':
         if method == 'mixed':
             if level == 'medium':
-                path = {"env": "halcheetah-medium-v2"}
+                path = {"env": "halfcheetah-medium-v2"}
             elif level == 'expert':
                 path = {"env": "halfcheetah-expert-v2"}
         elif dataset == 'expert':
