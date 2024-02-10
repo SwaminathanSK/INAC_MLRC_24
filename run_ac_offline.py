@@ -6,7 +6,7 @@ import core.environment.env_factory as environment
 from core.utils import torch_utils, logger, run_funcs
 from core.agent.in_sample import *
 
-file_ids = {'Ant': '1O6b4HgPbyFjOfxlGJBbGdfhb0J1yO_pQ', 'Hopper': '1L3CPv5R0VPuUxvUjYSfothVOptEVXHUK'}
+file_ids = {'Ant': 'https://storage.googleapis.com/im_datasets/ant.tar', 'Hopper': 'https://storage.googleapis.com/im_datasets/hopper.tar', 'HalfCheetah': 'https://storage.googleapis.com/im_datasets/cheetah.tar', 'Walker2d': 'https://storage.googleapis.com/im_datasets/walker2d.tar'}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="run_file")
@@ -40,7 +40,8 @@ if __name__ == '__main__':
     cfg = parser.parse_args()
 
     if(cfg.dataset_method != 'none'):
-        command = f'mkdir -p custom_datasets/; cd custom_datasets/; gdown {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
+        # command = f'mkdir -p custom_datasets/; cd custom_datasets/; gdown {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
+        command = f'mkdir -p custom_datasets/; cd custom_datasets/; wget {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
         try:
             # Run the command
             result = subprocess.run(command, shell=True, check=True, text=True, capture_output=True)
