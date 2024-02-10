@@ -88,22 +88,22 @@ def load_testset(env_name, dataset, id, method, ratio, level):
     for name in path:
         if name == "env":
             env = gym.make(path['env'])
-            try:
-                if method == 'none':
-                    data = env.get_dataset()
-                elif method == 'mixed':
-                    file_path = f"custom_datasets/{env_name}/{env_name}-random-{level}-{ratio}-v2.hdf5"
-                    print(file_path)
-                    with h5py.File(file_path, 'r') as f:
-                        data = {}
-                        data['observations'] = list(f['observations'][()])
-                        data['actions'] = list(f['actions'][()])
-                        data['rewards'] = list(f['rewards'][()])
-                        data['next_observations'] = list(f['next_observations'][()])
-                        data['terminals'] = list(f['terminals'][()])
-            except:
-                env = env.unwrapped
+            # try:
+            if method == 'none':
                 data = env.get_dataset()
+            elif method == 'mixed':
+                file_path = f"custom_datasets/{env_name}/{env_name}-random-{level}-{ratio}-v2.hdf5"
+                print(file_path)
+                with h5py.File(file_path, 'r') as f:
+                    data = {}
+                    data['observations'] = list(f['observations'][()])
+                    data['actions'] = list(f['actions'][()])
+                    data['rewards'] = list(f['rewards'][()])
+                    data['next_observations'] = list(f['next_observations'][()])
+                    data['terminals'] = list(f['terminals'][()])
+            # except:
+            #     env = env.unwrapped
+            #     data = env.get_dataset()
 
             testsets[name] = {
                 'states': data['observations'],
