@@ -92,7 +92,7 @@ def load_testset(env_name, dataset, id, method, ratio, level):
             if method == 'none':
                 data = env.get_dataset()
             elif method == 'mixed':
-                file_path = f"custom_datasets/{env_name}/{env_name}-random-{level}-{ratio}-v2.hdf5"
+                file_path = f"custom_datasets/{env_name.lower()}/{env_name.lower()}-random-{level}-{ratio}-v2.hdf5"
                 print(file_path)
                 with h5py.File(file_path, 'r') as f:
                     data = {}
