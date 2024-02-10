@@ -16,7 +16,12 @@ EARLYCUTOFF = "EarlyCutOff"
 def load_testset(env_name, dataset, id, method, ratio, level):
     path = None
     if env_name == 'HalfCheetah':
-        if dataset == 'expert':
+        if method == 'mixed':
+            if level == 'medium':
+                path = {"env": "halcheetah-medium-v2"}
+            elif level == 'expert':
+                path = {"env": "halfcheetah-expert-v2"}
+        elif dataset == 'expert':
             path = {"env": "halfcheetah-expert-v2"}
         elif dataset == 'medexp':
             path = {"env": "halfcheetah-medium-expert-v2"}
@@ -25,7 +30,12 @@ def load_testset(env_name, dataset, id, method, ratio, level):
         elif dataset == 'medrep':
             path = {"env": "halfcheetah-medium-replay-v2"}
     elif env_name == 'Walker2d':
-        if dataset == 'expert':
+        if method == 'mixed':
+            if level == 'medium':
+                path = {"env": "walker2d-medium-v2"}
+            elif level == 'expert':
+                path = {"env": "walker2d-expert-v2"}
+        elif dataset == 'expert':
             path = {"env": "walker2d-expert-v2"}
         elif dataset == 'medexp':
             path = {"env": "walker2d-medium-expert-v2"}
@@ -48,7 +58,12 @@ def load_testset(env_name, dataset, id, method, ratio, level):
         elif dataset == 'medrep':
             path = {"env": "hopper-medium-replay-v2"}
     elif env_name == 'Ant':
-        if dataset == 'expert':
+        if method == 'mixed':
+            if level == 'medium':
+                path = {"env": "ant-medium-v2"}
+            elif level == 'expert':
+                path = {"env": "ant-expert-v2"}
+        elif dataset == 'expert':
             path = {"env": "ant-expert-v2"}
         elif dataset == 'medexp':
             path = {"env": "ant-medium-expert-v2"}
