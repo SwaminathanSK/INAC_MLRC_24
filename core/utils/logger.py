@@ -50,7 +50,7 @@ class Logger:
             print("----------------------------------------------------ATTRIBUTES----------------------------------------------------")
             print("----------------------------------------------------ATTRIBUTES----------------------------------------------------")
             print("----------------------------------------------------ATTRIBUTES----------------------------------------------------")
-            self.run = wandb.init(project="ImbalancedDatasets", config=self.attrs)
+            self.run = wandb.init(project="ImbalancedDatasets1", config=self.attrs)
 
     def info(self, log_msg):
         self._logger.info(log_msg)
