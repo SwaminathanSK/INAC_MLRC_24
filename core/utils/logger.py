@@ -43,7 +43,7 @@ class Logger:
                 del self.attrs[k]
             # wandb.login(key = "ab2b40ca778eb2262c7ad70b4887b9a82110f794") # swami
             wandb.login(key = "9693e19323d20b494a26a6ee07f05881b2107bf8") # shreyansh
-            self.run = wandb.init(project="newProject", config=self.attrs)
+            self.run = wandb.init(project="ImbalancedDatasets", config=self.attrs)
 
     def info(self, log_msg):
         self._logger.info(log_msg)
