@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     if(cfg.dataset_method != 'none'):
         # command = f'mkdir -p custom_datasets/; cd custom_datasets/; gdown {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
-        command = f'mkdir -p custom_datasets/; cd custom_datasets/; wget {file_ids[cfg.env_name]} -O {cfg.env_name}.tar.gz; tar -xvzf {cfg.env_name}.tar.gz; rm {cfg.env_name}.tar.gz'
+        command = f'mkdir -p custom_datasets/; cd custom_datasets/; wget {file_ids[cfg.env_name]} -O {cfg.env_name}.tar; tar -xvf {cfg.env_name}.tar; rm {cfg.env_name}.tar'
         try:
             # Run the command
             result = subprocess.run(command, shell=True, check=True, text=True, capture_output=True)
