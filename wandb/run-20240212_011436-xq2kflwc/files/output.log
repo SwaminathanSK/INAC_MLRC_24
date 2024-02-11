@@ -23,3 +23,32 @@
 2024-02-12 01:14:41,968 | dataset_level: medium
 2024-02-12 01:14:41,968 | exp_path: /home/c12/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run
 2024-02-12 01:14:41,969 | tensorboard_logs: True
+INFO:root:seed: 0
+INFO:root:env_name: Ant
+INFO:root:dataset: expert
+INFO:root:discrete_control: 0
+INFO:root:state_dim: 111
+INFO:root:action_dim: 8
+INFO:root:tau: 0.01
+INFO:root:max_steps: 1000000
+INFO:root:log_interval: 10000
+INFO:root:learning_rate: 0.0003
+INFO:root:hidden_units: 256
+INFO:root:batch_size: 256
+INFO:root:timeout: 1000
+INFO:root:gamma: 0.99
+INFO:root:use_target_network: 1
+INFO:root:target_network_update_freq: 1
+INFO:root:polyak: 0.995
+INFO:root:evaluation_criteria: return
+INFO:root:device: cuda
+INFO:root:info: 0
+INFO:root:dataset_method: none
+INFO:root:ratio: 0.05
+INFO:root:dataset_level: medium
+INFO:root:exp_path: /home/c12/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run
+INFO:root:tensorboard_logs: True
+Traceback (most recent call last):
+  File "run_ac_offline.py", line 80, in <module>
+    agent_obj = InSampleAC(
+NameError: name 'InSampleAC' is not defined

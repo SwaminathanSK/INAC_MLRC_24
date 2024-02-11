@@ -1,0 +1,155 @@
+{
+    "os": "Linux-6.6.10-arch1-1-x86_64-with-glibc2.17",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-02-11T19:41:19.016704",
+    "startedAt": "2024-02-11T19:41:14.112013",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--seed",
+        "0",
+        "--env_name",
+        "Ant",
+        "--dataset",
+        "expert",
+        "--discrete_control",
+        "0",
+        "--state_dim",
+        "111",
+        "--action_dim",
+        "8",
+        "--tau",
+        "0.01",
+        "--learning_rate",
+        "0.0003",
+        "--hidden_units",
+        "256",
+        "--batch_size",
+        "256",
+        "--timeout",
+        "1000",
+        "--max_steps",
+        "1000000",
+        "--log_interval",
+        "10000"
+    ],
+    "state": "running",
+    "program": "run_ac_offline.py",
+    "codePathLocal": "run_ac_offline.py",
+    "codePath": "run_ac_offline.py",
+    "git": {
+        "remote": "https://github.com/SwaminathanSK/INAC_MLRC_24.git",
+        "commit": "fe1bfa0c104c23d535fbd92764d5286176093d5a"
+    },
+    "email": "xe54c13@gmail.com",
+    "root": "/home/c12/git/INAC_MLRC_24",
+    "host": "g14",
+    "username": "c12",
+    "executable": "/home/c12/miniconda3/envs/decdiff/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2873.2058125,
+        "min": 400.0,
+        "max": 4463.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4156.7,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 4299.573,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 4293.41,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 2589.138,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 3486.045,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 3435.553,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 3123.22,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 3058.093,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 4151.598,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 3430.723,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 3438.964,
+            "min": 400.0,
+            "max": 4463.0
+        },
+        {
+            "current": 2726.363,
+            "min": 400.0,
+            "max": 4463.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 125.18937683105469,
+            "used": 116.15447235107422
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1650",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.032695770263672
+    }
+}
