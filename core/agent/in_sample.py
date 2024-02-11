@@ -190,7 +190,7 @@ class InSampleAC(base.Agent):
         # adding regularizer
         lambda_pi = 0.1
         pi_loss = -(clipped * log_probs).mean() * lambda_pi
-        pi_loss += F.mse(log_probs, beh_log_prob).mean() 
+        pi_loss += F.mse_loss(log_probs, beh_log_prob).mean() 
         return pi_loss, ""
 
     def update_beta(self, data):
