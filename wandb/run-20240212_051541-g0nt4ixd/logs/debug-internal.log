@@ -1,0 +1,206 @@
+2024-02-12 05:15:41,255 INFO    StreamThr :311631 [internal.py:wandb_internal():86] W&B internal server running at pid: 311631, started at: 2024-02-12 05:15:41.254655
+2024-02-12 05:15:41,255 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: status
+2024-02-12 05:15:41,257 INFO    WriterThread:311631 [datastore.py:open_for_write():87] open: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/run-g0nt4ixd.wandb
+2024-02-12 05:15:41,257 DEBUG   SenderThread:311631 [sender.py:send():382] send: header
+2024-02-12 05:15:41,292 DEBUG   SenderThread:311631 [sender.py:send():382] send: run
+2024-02-12 05:15:42,098 INFO    SenderThread:311631 [dir_watcher.py:__init__():211] watching files in: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files
+2024-02-12 05:15:42,098 INFO    SenderThread:311631 [sender.py:_start_run_threads():1136] run started: g0nt4ixd with start time 1707695141.254337
+2024-02-12 05:15:42,106 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: check_version
+2024-02-12 05:15:42,106 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: check_version
+2024-02-12 05:15:42,375 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: run_start
+2024-02-12 05:15:43,260 DEBUG   HandlerThread:311631 [system_info.py:__init__():27] System info init
+2024-02-12 05:15:43,260 DEBUG   HandlerThread:311631 [system_info.py:__init__():42] System info init done
+2024-02-12 05:15:43,260 INFO    HandlerThread:311631 [system_monitor.py:start():194] Starting system monitor
+2024-02-12 05:15:43,260 INFO    SystemMonitor:311631 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-02-12 05:15:43,261 INFO    HandlerThread:311631 [system_monitor.py:probe():214] Collecting system info
+2024-02-12 05:15:43,261 INFO    SystemMonitor:311631 [interfaces.py:start():190] Started cpu monitoring
+2024-02-12 05:15:43,262 INFO    SystemMonitor:311631 [interfaces.py:start():190] Started disk monitoring
+2024-02-12 05:15:43,263 INFO    SystemMonitor:311631 [interfaces.py:start():190] Started gpu monitoring
+2024-02-12 05:15:43,265 INFO    SystemMonitor:311631 [interfaces.py:start():190] Started memory monitoring
+2024-02-12 05:15:43,266 INFO    SystemMonitor:311631 [interfaces.py:start():190] Started network monitoring
+2024-02-12 05:15:43,274 DEBUG   HandlerThread:311631 [system_info.py:probe():151] Probing system
+2024-02-12 05:15:43,279 DEBUG   HandlerThread:311631 [system_info.py:_probe_git():136] Probing git
+2024-02-12 05:15:43,291 DEBUG   HandlerThread:311631 [system_info.py:_probe_git():144] Probing git done
+2024-02-12 05:15:43,291 DEBUG   HandlerThread:311631 [system_info.py:probe():199] Probing system done
+2024-02-12 05:15:43,291 DEBUG   HandlerThread:311631 [system_monitor.py:probe():223] {'os': 'Linux-6.6.10-arch1-1-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-02-11T23:45:43.274251', 'startedAt': '2024-02-11T23:45:41.249220', 'docker': None, 'cuda': None, 'args': ('--seed', '0', '--env_name', 'Ant', '--dataset', 'expert', '--discrete_control', '0', '--state_dim', '111', '--action_dim', '8', '--tau', '0.01', '--learning_rate', '0.0003', '--hidden_units', '256', '--batch_size', '256', '--timeout', '1000', '--max_steps', '1000000', '--log_interval', '10000'), 'state': 'running', 'program': 'run_ac_offline.py', 'codePathLocal': 'run_ac_offline.py', 'codePath': 'run_ac_offline.py', 'git': {'remote': 'https://github.com/SwaminathanSK/INAC_MLRC_24.git', 'commit': '4c1f889605827eb44a057c98102e6e32fd19f248'}, 'email': 'xe54c13@gmail.com', 'root': '/home/c12/git/INAC_MLRC_24', 'host': 'g14', 'username': 'c12', 'executable': '/home/c12/miniconda3/envs/decdiff/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2762.378125, 'min': 400.0, 'max': 4463.0}, 'cpu_freq_per_core': [{'current': 3555.476, 'min': 400.0, 'max': 4463.0}, {'current': 3427.112, 'min': 400.0, 'max': 4463.0}, {'current': 3688.52, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 3913.032, 'min': 400.0, 'max': 4463.0}, {'current': 4281.167, 'min': 400.0, 'max': 4463.0}, {'current': 4269.633, 'min': 400.0, 'max': 4463.0}, {'current': 4273.732, 'min': 400.0, 'max': 4463.0}, {'current': 3597.72, 'min': 400.0, 'max': 4463.0}, {'current': 4273.743, 'min': 400.0, 'max': 4463.0}, {'current': 4284.123, 'min': 400.0, 'max': 4463.0}, {'current': 3427.307, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}, {'current': 3434.95, 'min': 400.0, 'max': 4463.0}, {'current': 400.0, 'min': 400.0, 'max': 4463.0}], 'disk': {'/': {'total': 125.18937683105469, 'used': 116.1562385559082}}, 'gpu': 'NVIDIA GeForce GTX 1650', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1650', 'memory_total': 4294967296}], 'memory': {'total': 15.032695770263672}}
+2024-02-12 05:15:43,291 INFO    HandlerThread:311631 [system_monitor.py:probe():224] Finished collecting system info
+2024-02-12 05:15:43,291 INFO    HandlerThread:311631 [system_monitor.py:probe():227] Publishing system info
+2024-02-12 05:15:43,291 DEBUG   HandlerThread:311631 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-02-12 05:15:44,099 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_created():271] file/dir created: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/conda-environment.yaml
+2024-02-12 05:15:44,910 DEBUG   HandlerThread:311631 [system_info.py:_save_conda():220] Saving conda packages done
+2024-02-12 05:15:44,911 INFO    HandlerThread:311631 [system_monitor.py:probe():229] Finished publishing system info
+2024-02-12 05:15:44,913 DEBUG   SenderThread:311631 [sender.py:send():382] send: files
+2024-02-12 05:15:44,913 INFO    SenderThread:311631 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-02-12 05:15:44,917 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: python_packages
+2024-02-12 05:15:44,917 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: stop_status
+2024-02-12 05:15:44,917 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: python_packages
+2024-02-12 05:15:44,918 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: stop_status
+2024-02-12 05:15:44,919 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-12 05:15:45,099 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/conda-environment.yaml
+2024-02-12 05:15:45,099 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_created():271] file/dir created: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/wandb-metadata.json
+2024-02-12 05:15:45,099 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_created():271] file/dir created: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/requirements.txt
+2024-02-12 05:15:45,411 DEBUG   SenderThread:311631 [sender.py:send():382] send: telemetry
+2024-02-12 05:15:46,097 INFO    wandb-upload_0:311631 [upload_job.py:push():131] Uploaded file /tmp/tmpoucw49vbwandb/up0769e0-wandb-metadata.json
+2024-02-12 05:15:46,099 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_created():271] file/dir created: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:15:46,414 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: status_report
+2024-02-12 05:15:48,100 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:15:51,966 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: status_report
+2024-02-12 05:15:52,100 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:15:54,101 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:15:54,817 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-12 05:15:54,819 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: partial_history
+2024-02-12 05:15:54,819 DEBUG   SenderThread:311631 [sender.py:send():382] send: history
+2024-02-12 05:15:54,820 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: summary_record
+2024-02-12 05:15:54,820 INFO    SenderThread:311631 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-02-12 05:15:54,820 DEBUG   SenderThread:311631 [sender.py:send():382] send: history
+2024-02-12 05:15:54,820 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: summary_record
+2024-02-12 05:15:54,820 INFO    SenderThread:311631 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-02-12 05:15:54,993 DEBUG   SenderThread:311631 [sender.py:send():382] send: exit
+2024-02-12 05:15:54,993 INFO    SenderThread:311631 [sender.py:send_exit():589] handling exit code: 1
+2024-02-12 05:15:54,993 INFO    SenderThread:311631 [sender.py:send_exit():591] handling runtime: 12
+2024-02-12 05:15:54,993 INFO    SenderThread:311631 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-02-12 05:15:54,993 INFO    SenderThread:311631 [sender.py:send_exit():597] send defer
+2024-02-12 05:15:54,993 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:54,993 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 0
+2024-02-12 05:15:54,993 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:54,993 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-02-12 05:15:54,993 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 1
+2024-02-12 05:15:54,994 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:54,994 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 1
+2024-02-12 05:15:54,994 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:54,994 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-02-12 05:15:54,994 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 2
+2024-02-12 05:15:54,994 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:54,994 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 2
+2024-02-12 05:15:54,994 INFO    HandlerThread:311631 [system_monitor.py:finish():203] Stopping system monitor
+2024-02-12 05:15:54,994 INFO    HandlerThread:311631 [interfaces.py:finish():202] Joined cpu monitor
+2024-02-12 05:15:54,994 DEBUG   SystemMonitor:311631 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-02-12 05:15:54,994 INFO    HandlerThread:311631 [interfaces.py:finish():202] Joined disk monitor
+2024-02-12 05:15:54,994 DEBUG   SystemMonitor:311631 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-02-12 05:15:54,995 DEBUG   SystemMonitor:311631 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-02-12 05:15:55,045 INFO    HandlerThread:311631 [interfaces.py:finish():202] Joined gpu monitor
+2024-02-12 05:15:55,046 INFO    HandlerThread:311631 [interfaces.py:finish():202] Joined memory monitor
+2024-02-12 05:15:55,046 INFO    HandlerThread:311631 [interfaces.py:finish():202] Joined network monitor
+2024-02-12 05:15:55,046 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:55,046 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-02-12 05:15:55,047 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 3
+2024-02-12 05:15:55,047 DEBUG   SenderThread:311631 [sender.py:send():382] send: stats
+2024-02-12 05:15:55,047 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:55,047 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 3
+2024-02-12 05:15:55,047 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:55,047 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-02-12 05:15:55,047 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 4
+2024-02-12 05:15:55,047 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:55,047 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 4
+2024-02-12 05:15:55,048 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:55,048 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-02-12 05:15:55,048 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 5
+2024-02-12 05:15:55,048 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:55,048 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 5
+2024-02-12 05:15:55,048 DEBUG   SenderThread:311631 [sender.py:send():382] send: summary
+2024-02-12 05:15:55,048 INFO    SenderThread:311631 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-02-12 05:15:55,048 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:55,048 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-02-12 05:15:55,048 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 6
+2024-02-12 05:15:55,049 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:55,049 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 6
+2024-02-12 05:15:55,049 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:55,049 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-02-12 05:15:55,051 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: status_report
+2024-02-12 05:15:55,102 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_created():271] file/dir created: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/wandb-summary.json
+2024-02-12 05:15:55,408 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 7
+2024-02-12 05:15:55,408 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:55,408 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 7
+2024-02-12 05:15:55,408 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:55,408 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-02-12 05:15:55,993 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-12 05:15:56,102 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/config.yaml
+2024-02-12 05:15:56,103 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:15:57,442 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 8
+2024-02-12 05:15:57,442 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: poll_exit
+2024-02-12 05:15:57,443 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:57,443 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 8
+2024-02-12 05:15:57,443 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:57,443 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-02-12 05:15:57,443 INFO    SenderThread:311631 [job_builder.py:build():296] Attempting to build job artifact
+2024-02-12 05:15:57,443 INFO    SenderThread:311631 [job_builder.py:_get_source_type():426] is repo sourced job
+2024-02-12 05:15:57,465 INFO    SenderThread:311631 [job_builder.py:build():402] adding wandb-job metadata file
+2024-02-12 05:15:57,466 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 9
+2024-02-12 05:15:57,467 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:15:57,467 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 9
+2024-02-12 05:15:57,467 DEBUG   SenderThread:311631 [sender.py:send():382] send: artifact
+2024-02-12 05:15:57,994 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-12 05:15:58,103 INFO    Thread-13 :311631 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:15:59,141 INFO    SenderThread:311631 [sender.py:send_artifact():1494] sent artifact job-https___github.com_SwaminathanSK_INAC_MLRC_24.git_run_ac_offline.py - {'id': 'QXJ0aWZhY3Q6NzE5NjU4NTIz', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEzODc2MDM2Mg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzE5NjU4NTIz', 'versionIndex': 11}}}
+2024-02-12 05:15:59,142 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:15:59,142 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-02-12 05:15:59,142 INFO    SenderThread:311631 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-02-12 05:16:00,104 INFO    SenderThread:311631 [dir_watcher.py:finish():388] scan: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files
+2024-02-12 05:16:00,105 INFO    SenderThread:311631 [dir_watcher.py:finish():402] scan save: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/wandb-summary.json wandb-summary.json
+2024-02-12 05:16:00,105 INFO    SenderThread:311631 [dir_watcher.py:finish():402] scan save: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/config.yaml config.yaml
+2024-02-12 05:16:00,105 INFO    SenderThread:311631 [dir_watcher.py:finish():402] scan save: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/requirements.txt requirements.txt
+2024-02-12 05:16:00,105 INFO    SenderThread:311631 [dir_watcher.py:finish():402] scan save: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log output.log
+2024-02-12 05:16:00,105 INFO    SenderThread:311631 [dir_watcher.py:finish():402] scan save: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/wandb-metadata.json wandb-metadata.json
+2024-02-12 05:16:00,106 INFO    SenderThread:311631 [dir_watcher.py:finish():402] scan save: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/conda-environment.yaml conda-environment.yaml
+2024-02-12 05:16:00,106 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 10
+2024-02-12 05:16:00,113 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: poll_exit
+2024-02-12 05:16:00,113 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:16:00,115 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 10
+2024-02-12 05:16:00,117 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:16:00,117 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-02-12 05:16:00,117 INFO    SenderThread:311631 [file_pusher.py:finish():172] shutting down file pusher
+2024-02-12 05:16:00,810 INFO    wandb-upload_0:311631 [upload_job.py:push():131] Uploaded file /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/wandb-summary.json
+2024-02-12 05:16:00,995 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-12 05:16:00,995 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: poll_exit
+2024-02-12 05:16:01,002 INFO    wandb-upload_2:311631 [upload_job.py:push():131] Uploaded file /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/requirements.txt
+2024-02-12 05:16:01,125 INFO    wandb-upload_1:311631 [upload_job.py:push():131] Uploaded file /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/config.yaml
+2024-02-12 05:16:01,184 INFO    wandb-upload_4:311631 [upload_job.py:push():131] Uploaded file /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/conda-environment.yaml
+2024-02-12 05:16:01,376 INFO    wandb-upload_3:311631 [upload_job.py:push():131] Uploaded file /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/files/output.log
+2024-02-12 05:16:01,576 INFO    Thread-12 :311631 [sender.py:transition_state():617] send defer: 11
+2024-02-12 05:16:01,577 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:16:01,577 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 11
+2024-02-12 05:16:01,577 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:16:01,577 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-02-12 05:16:01,577 INFO    SenderThread:311631 [file_pusher.py:join():178] waiting for file pusher
+2024-02-12 05:16:01,577 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 12
+2024-02-12 05:16:01,577 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:16:01,578 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 12
+2024-02-12 05:16:01,578 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:16:01,578 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-02-12 05:16:01,578 INFO    SenderThread:311631 [file_stream.py:finish():595] file stream finish called
+2024-02-12 05:16:01,996 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-12 05:16:02,122 INFO    SenderThread:311631 [file_stream.py:finish():599] file stream finish is done
+2024-02-12 05:16:02,123 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 13
+2024-02-12 05:16:02,123 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: poll_exit
+2024-02-12 05:16:02,123 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:16:02,123 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 13
+2024-02-12 05:16:02,123 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:16:02,123 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-02-12 05:16:02,123 INFO    SenderThread:311631 [sender.py:transition_state():617] send defer: 14
+2024-02-12 05:16:02,124 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: defer
+2024-02-12 05:16:02,124 INFO    HandlerThread:311631 [handler.py:handle_request_defer():172] handle defer: 14
+2024-02-12 05:16:02,124 DEBUG   SenderThread:311631 [sender.py:send():382] send: final
+2024-02-12 05:16:02,124 DEBUG   SenderThread:311631 [sender.py:send():382] send: footer
+2024-02-12 05:16:02,124 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: defer
+2024-02-12 05:16:02,124 INFO    SenderThread:311631 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-02-12 05:16:02,124 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-12 05:16:02,125 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: poll_exit
+2024-02-12 05:16:02,125 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: poll_exit
+2024-02-12 05:16:02,125 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: server_info
+2024-02-12 05:16:02,125 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: poll_exit
+2024-02-12 05:16:02,125 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: server_info
+2024-02-12 05:16:02,127 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: get_summary
+2024-02-12 05:16:02,128 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: sampled_history
+2024-02-12 05:16:02,129 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: internal_messages
+2024-02-12 05:16:02,129 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: job_info
+2024-02-12 05:16:02,448 DEBUG   SenderThread:311631 [sender.py:send_request():409] send_request: job_info
+2024-02-12 05:16:02,448 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: status_report
+2024-02-12 05:16:02,448 INFO    MainThread:311631 [wandb_run.py:_footer_history_summary_info():3866] rendering history
+2024-02-12 05:16:02,449 INFO    MainThread:311631 [wandb_run.py:_footer_history_summary_info():3898] rendering summary
+2024-02-12 05:16:02,449 INFO    MainThread:311631 [wandb_run.py:_footer_sync_info():3825] logging synced files
+2024-02-12 05:16:02,450 DEBUG   HandlerThread:311631 [handler.py:handle_request():146] handle_request: shutdown
+2024-02-12 05:16:02,450 INFO    HandlerThread:311631 [handler.py:finish():869] shutting down handler
+2024-02-12 05:16:03,449 INFO    SenderThread:311631 [sender.py:finish():1572] shutting down sender
+2024-02-12 05:16:03,449 INFO    WriterThread:311631 [datastore.py:close():296] close: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051541-g0nt4ixd/run-g0nt4ixd.wandb
+2024-02-12 05:16:03,449 INFO    SenderThread:311631 [file_pusher.py:finish():172] shutting down file pusher
+2024-02-12 05:16:03,450 INFO    SenderThread:311631 [file_pusher.py:join():178] waiting for file pusher

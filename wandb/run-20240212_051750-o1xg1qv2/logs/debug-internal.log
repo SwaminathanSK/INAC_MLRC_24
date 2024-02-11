@@ -1,0 +1,5 @@
+2024-02-12 05:17:50,450 INFO    StreamThr :312406 [internal.py:wandb_internal():86] W&B internal server running at pid: 312406, started at: 2024-02-12 05:17:50.450054
+2024-02-12 05:17:50,451 DEBUG   HandlerThread:312406 [handler.py:handle_request():146] handle_request: status
+2024-02-12 05:17:50,453 INFO    WriterThread:312406 [datastore.py:open_for_write():87] open: /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051750-o1xg1qv2/run-o1xg1qv2.wandb
+2024-02-12 05:17:50,453 DEBUG   SenderThread:312406 [sender.py:send():382] send: header
+2024-02-12 05:17:50,489 DEBUG   SenderThread:312406 [sender.py:send():382] send: run

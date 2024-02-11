@@ -180,7 +180,7 @@ class InSampleAC(base.Agent):
         states, actions = data['obs'], data['act']
 
         log_probs = self.ac.pi.get_logprob(states, actions)
-        pi_actions = self.ac.pi(states)
+        pi_actions, _ = self.ac.pi(states)
         min_Q, _, _ = self.get_q_value(states, actions, with_grad=False)
         with torch.no_grad():
             value = self.get_state_value(states)
@@ -190,7 +190,7 @@ class InSampleAC(base.Agent):
         # adding regularizer
         lambda_pi = 0.1
         pi_loss = -(clipped * log_probs).mean() * lambda_pi
-        # pi_loss += F.mse_loss(log_probs, beh_log_prob).mean() 
+        # pi_loss += F.mse_loss(log_probs, beh_log_prob).mean()
         pi_loss += F.mse_loss(pi_actions, actions).mean() 
         return pi_loss, ""
 

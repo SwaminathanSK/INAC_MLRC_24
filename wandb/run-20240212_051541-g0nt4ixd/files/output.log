@@ -1,0 +1,115 @@
+INFO:root:seed: 0
+INFO:root:env_name: Ant
+INFO:root:dataset: expert
+INFO:root:discrete_control: 0
+INFO:root:state_dim: 111
+INFO:root:action_dim: 8
+INFO:root:tau: 0.01
+INFO:root:max_steps: 1000000
+INFO:root:log_interval: 10000
+INFO:root:learning_rate: 0.0003
+INFO:root:hidden_units: 256
+INFO:root:batch_size: 256
+INFO:root:timeout: 1000
+INFO:root:gamma: 0.99
+INFO:root:use_target_network: 1
+INFO:root:target_network_update_freq: 1
+INFO:root:polyak: 0.995
+INFO:root:evaluation_criteria: return
+INFO:root:device: cuda
+INFO:root:info: 0
+INFO:root:dataset_method: none
+INFO:root:ratio: 0.05
+INFO:root:dataset_level: medium
+INFO:root:exp_path: /home/c12/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run
+INFO:root:tensorboard_logs: True
+/home/c12/miniconda3/envs/decdiff/lib/python3.8/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+/home/c12/miniconda3/envs/decdiff/lib/python3.8/site-packages/gym/core.py:172: DeprecationWarning: [33mWARN: Function `env.seed(seed)` is marked as deprecated and will be removed in the future. Please use `env.reset(seed=seed) instead.
+  deprecation(
+2024-02-12 05:15:44,920 | seed: 0
+2024-02-12 05:15:44,920 | env_name: Ant
+2024-02-12 05:15:44,920 | dataset: expert
+2024-02-12 05:15:44,920 | discrete_control: 0
+2024-02-12 05:15:44,920 | state_dim: 111
+2024-02-12 05:15:44,920 | action_dim: 8
+2024-02-12 05:15:44,921 | tau: 0.01
+2024-02-12 05:15:44,921 | max_steps: 1000000
+2024-02-12 05:15:44,921 | log_interval: 10000
+2024-02-12 05:15:44,921 | learning_rate: 0.0003
+2024-02-12 05:15:44,921 | hidden_units: 256
+2024-02-12 05:15:44,921 | batch_size: 256
+2024-02-12 05:15:44,921 | timeout: 1000
+2024-02-12 05:15:44,921 | gamma: 0.99
+2024-02-12 05:15:44,921 | use_target_network: 1
+2024-02-12 05:15:44,921 | target_network_update_freq: 1
+2024-02-12 05:15:44,921 | polyak: 0.995
+2024-02-12 05:15:44,922 | evaluation_criteria: return
+2024-02-12 05:15:44,922 | device: cuda
+2024-02-12 05:15:44,922 | info: 0
+2024-02-12 05:15:44,922 | dataset_method: none
+2024-02-12 05:15:44,922 | ratio: 0.05
+2024-02-12 05:15:44,922 | dataset_level: medium
+2024-02-12 05:15:44,922 | exp_path: /home/c12/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run
+2024-02-12 05:15:44,922 | tensorboard_logs: True
+2024-02-12 05:15:50,964 | TRAIN LOG: steps 0, episodes   0, returns 963.55/960.17/956.90/971.62/5 (mean/median/min/max/num), 2576.03 steps/s
+INFO:root:TRAIN LOG: steps 0, episodes   0, returns 963.55/960.17/956.90/971.62/5 (mean/median/min/max/num), 2576.03 steps/s
+INFO:root:TEST LOG: steps 0, episodes   0, returns 942.26/935.53/924.44/960.38/5 (mean/median/min/max/num), 2576.03 steps/s
+INFO:root:Normalized LOG: steps 0, episodes   0, returns 0.30/0.30/0.30/0.31/5 (mean/median/min/max/num), 2576.03 steps/s
+2024-02-12 05:15:54,816 | TEST LOG: steps 0, episodes   0, returns 942.26/935.53/924.44/960.38/5 (mean/median/min/max/num), 2576.03 steps/s
+2024-02-12 05:15:54,817 | Normalized LOG: steps 0, episodes   0, returns 0.30/0.30/0.30/0.31/5 (mean/median/min/max/num), 2576.03 steps/s
+(tensor([[-0.0247,  0.0520,  0.6109,  ..., -0.2125, -0.1291, -0.1576],
+        [ 0.6135,  0.4949, -0.4678,  ...,  0.4907,  0.3137,  0.4803],
+        [ 0.6452,  0.3948,  0.6715,  ...,  0.0122,  0.4050,  0.1092],
+        ...,
+        [ 0.5948, -0.0078,  0.6678,  ..., -0.2850, -0.1300,  0.2917],
+        [ 0.4784,  0.2469,  0.3751,  ...,  0.2246,  0.0731, -0.1417],
+        [ 0.8120,  0.3225,  0.6738,  ...,  0.3612,  0.4233,  0.3812]],
+       device='cuda:0', grad_fn=<AddBackward0>), tensor([11.0462, 13.7093,  9.4490, 14.8164, 11.6101, 11.7737, 13.3807, 11.2053,
+         8.8110, 12.5340, 14.8183, 13.4807, 11.9942, 11.4773, 10.7874, 13.4331,
+        10.5326,  9.4548, 11.2889, 15.2741, 11.3779, 13.8897,  8.4416, 11.8213,
+        14.1601, 12.0620, 14.2943, 13.0980,  9.5376, 12.7421,  9.6357, 11.3853,
+        14.7303,  7.8929, 14.0997, 12.3484, 10.7173, 15.6444, 14.1305,  9.6436,
+        14.5389, 14.1452, 14.9138, 11.4217, 12.7745,  7.4403, 15.0395,  7.7503,
+        14.2468, 12.9642, 15.1521, 10.5600, 14.4478, 12.8493, 11.9168, 13.3900,
+        13.4923, 13.8896, 13.3550, 13.0488, 11.2289, 12.4044, 13.3676, 10.7057,
+         9.6611, 13.6035, 12.7299, 13.5391,  9.9636, 11.4717, 13.9847, 11.5152,
+        15.8563, 12.9824, 10.4305, 14.4605, 11.9549, 12.6909, 12.4455, 15.0334,
+        10.4786, 12.3682, 14.1780, 14.3147, 13.1670,  9.8237, 10.6716, 12.4947,
+        14.0906, 10.2276, 12.1872, 12.7704,  5.6522, 13.4968, 11.1998,  8.9360,
+        13.8706, 12.3918, 12.9399, 12.6719, 10.5111, 14.9340,  7.7310,  9.8792,
+        13.9113, 14.1416,  9.2220, 14.7200,  7.2604, 15.3190, 11.7638, 10.7336,
+        14.6445, 15.6299, 11.3719, 11.9308, 12.6448, 13.2525, 14.1337, 11.8240,
+        13.8843, 11.8001, 14.1714, 13.0380, 15.1157, 13.6338, 11.0756, 12.2425,
+         9.7689, 10.8645, 11.9880, 12.4563, 15.0245, 14.5925,  6.1021, 13.9212,
+        12.5310, 13.1966, 12.6037, 14.0817, 12.7362, 13.4179, 13.6498, 15.3964,
+         9.9424,  8.5807,  9.5037, 13.0750, 12.5714, 14.4871, 12.9665, 14.9300,
+        13.5777, 15.1015, 11.5629, 14.0467, 11.8585, 14.0151, 12.6553,  9.0242,
+        11.4332, 14.2907, 13.3762, 13.6277, 11.9844, 12.5113, 15.3071, 14.2155,
+        12.6809, 12.1685, 15.1559, 12.9369, 10.3480, 11.6885, 13.9321, 13.1614,
+        15.6070,  9.4673, 13.0747, 11.0235, 13.2973, 13.5366, 11.4489, 13.5412,
+        13.1239, 12.0174, 12.0671, 11.7385,  8.1361, 14.2679, 13.5574, 13.4791,
+        12.7485, 14.8371, 13.4465, 15.3605, 13.8486, 15.0177, 10.8348, 12.6586,
+        13.4758, 15.3094, 13.1222, 13.0059, 10.4060, 12.2436, 12.1103, 12.4059,
+        14.7149, 14.2002, 14.6422, 13.2514, 14.0776, 11.8542, 13.3418, 14.5533,
+        11.0834,  9.5942,  5.2990, 11.5133, 13.1743, 13.2453, 14.0382, 13.8990,
+         8.8452, 12.5724, 13.5981, 10.4828, 12.4715,  7.5779, 13.4578, 14.7655,
+        10.8438, 11.5408, 12.5742, 11.4100, 10.5362, 14.0007, 13.3699, 13.9406,
+         8.3864, 13.5407, 13.8367, 13.7331, 15.1534,  7.3113, 14.4038, 12.5428,
+        13.2658, 11.4256, 13.8499, 12.2274, 12.1432, 15.4117, 11.6669, 14.5563],
+       device='cuda:0', grad_fn=<SumBackward1>))
+<class 'torch.Tensor'>
+Traceback (most recent call last):
+  File "run_ac_offline.py", line 101, in <module>
+    run_funcs.run_steps(agent_obj, cfg.max_steps, cfg.log_interval, exp_path, cfg)
+  File "/home/c12/git/INAC_MLRC_24/core/utils/run_funcs.py", line 156, in run_steps
+    agent.step()
+  File "/home/c12/git/INAC_MLRC_24/core/agent/base.py", line 167, in step
+    losses = self.update(data)
+  File "/home/c12/git/INAC_MLRC_24/core/agent/in_sample.py", line 219, in update
+    loss_pi, _ = self.compute_loss_pi(data)
+  File "/home/c12/git/INAC_MLRC_24/core/agent/in_sample.py", line 196, in compute_loss_pi
+    pi_loss += F.mse_loss(pi_actions, actions).mean()
+  File "/home/c12/miniconda3/envs/decdiff/lib/python3.8/site-packages/torch/nn/functional.py", line 3328, in mse_loss
+    if not (target.size() == input.size()):
+AttributeError: 'tuple' object has no attribute 'size'

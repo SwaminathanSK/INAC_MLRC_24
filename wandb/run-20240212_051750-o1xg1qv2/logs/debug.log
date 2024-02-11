@@ -1,0 +1,19 @@
+2024-02-12 05:17:50,447 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Current SDK version is 0.16.3
+2024-02-12 05:17:50,447 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Configure stats pid to 312244
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Loading settings from /home/c12/.config/wandb/settings
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Loading settings from /home/c12/git/INAC_MLRC_24/wandb/settings
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'run_ac_offline.py', 'program_abspath': '/home/c12/git/INAC_MLRC_24/run_ac_offline.py', 'program': 'run_ac_offline.py'}
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_init.py:_log_setup():526] Logging user logs to /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051750-o1xg1qv2/logs/debug.log
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_init.py:_log_setup():527] Logging internal logs to /home/c12/git/INAC_MLRC_24/wandb/run-20240212_051750-o1xg1qv2/logs/debug-internal.log
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_init.py:init():566] calling init triggers
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {'seed': 0, 'env_name': 'Ant', 'dataset': 'expert', 'discrete_control': 0, 'state_dim': 111, 'action_dim': 8, 'tau': 0.01, 'max_steps': 1000000, 'log_interval': 10000, 'learning_rate': 0.0003, 'hidden_units': 256, 'batch_size': 256, 'timeout': 1000, 'gamma': 0.99, 'use_target_network': 1, 'target_network_update_freq': 1, 'polyak': 0.995, 'evaluation_criteria': 'return', 'device': 'cuda', 'info': '0', 'dataset_method': 'none', 'ratio': 0.05, 'dataset_level': 'medium', 'exp_path': '/home/c12/git/INAC_MLRC_24/data/output/Ant/expert/0/0_run', 'tensorboard_logs': True}
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_init.py:init():616] starting backend
+2024-02-12 05:17:50,448 INFO    MainThread:312244 [wandb_init.py:init():620] setting up manager
+2024-02-12 05:17:50,449 INFO    MainThread:312244 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-02-12 05:17:50,449 INFO    MainThread:312244 [wandb_init.py:init():628] backend started and connected
+2024-02-12 05:17:50,451 INFO    MainThread:312244 [wandb_init.py:init():720] updated telemetry
+2024-02-12 05:17:50,487 INFO    MainThread:312244 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
