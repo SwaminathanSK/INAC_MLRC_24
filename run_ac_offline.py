@@ -37,6 +37,10 @@ if __name__ == '__main__':
     parser.add_argument('--ratio', default=0.05, type=float)
     parser.add_argument('--dataset_level', default='medium', type=str)
 
+    # regularizer
+    parser.add_argument('--lambdaVal', default='none', type=str)
+
+
     cfg = parser.parse_args()
 
     if(cfg.dataset_method != 'none'):
@@ -96,6 +100,7 @@ if __name__ == '__main__':
         use_target_network=cfg.use_target_network,
         target_network_update_freq=cfg.target_network_update_freq,
         evaluation_criteria=cfg.evaluation_criteria,
-        logger=cfg.logger
+        logger=cfg.logger,
+        lambdaVal = cfg.lambdaVal
     )
     run_funcs.run_steps(agent_obj, cfg.max_steps, cfg.log_interval, exp_path, cfg)

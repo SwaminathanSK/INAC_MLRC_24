@@ -28,7 +28,8 @@ class InSampleAC(base.Agent):
                  use_target_network,
                  target_network_update_freq,
                  evaluation_criteria,
-                 logger
+                 logger,
+                 lambdaVal
                  ):
         super(InSampleAC, self).__init__(
             exp_path=exp_path,
@@ -43,7 +44,8 @@ class InSampleAC(base.Agent):
             target_network_update_freq=target_network_update_freq,
             evaluation_criteria=evaluation_criteria,
             logger=logger,
-            discrete_control=discrete_control
+            discrete_control=discrete_control,
+            lambdaVal = lambdaVal
         )
         
         def get_policy_func():
@@ -103,6 +105,8 @@ class InSampleAC(base.Agent):
         self.ac_targ.q1q2.load_state_dict(self.ac.q1q2.state_dict())
         self.ac_targ.pi.load_state_dict(self.ac.pi.state_dict())
         self.beh_pi = get_policy_func()
+
+        self.lambdaVal = lambdaVal
 
         # if self.discrete_control == 2:
         #     parameters_dir = self.parameters_dir
@@ -188,10 +192,13 @@ class InSampleAC(base.Agent):
 
         clipped = torch.clip(torch.exp((min_Q - value) / self.tau - beh_log_prob), self.eps, self.exp_threshold)
         # adding regularizer
-        lambda_pi = 0.01
-        pi_loss = -(clipped * log_probs).mean() * lambda_pi
+        if self.lambdaVal != "none":
+            lambda_pi = int(self.lambdaVal)
+            pi_loss = -(clipped * log_probs).mean() * lambda_pi
         # pi_loss += F.mse_loss(log_probs, beh_log_prob).mean()
-        pi_loss += F.mse_loss(pi_actions, actions).mean() 
+            pi_loss += F.mse_loss(pi_actions, actions).mean()
+        else:
+            pi_loss = -(clipped * log_probs).mean()
         return pi_loss, ""
 
     def update_beta(self, data):

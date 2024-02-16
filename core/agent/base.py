@@ -77,7 +77,8 @@ class Agent:
                  target_network_update_freq,
                  evaluation_criteria,
                  logger,
-                 discrete_control
+                 discrete_control,
+                 lambdaVal
                  ):
         self.discrete_control = discrete_control
         self.exp_path = exp_path
