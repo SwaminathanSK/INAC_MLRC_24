@@ -193,7 +193,7 @@ class InSampleAC(base.Agent):
         clipped = torch.clip(torch.exp((min_Q - value) / self.tau - beh_log_prob), self.eps, self.exp_threshold)
         # adding regularizer
         if self.lambdaVal != "none":
-            lambda_pi = int(self.lambdaVal)
+            lambda_pi = float(self.lambdaVal)
             pi_loss = -(clipped * log_probs).mean() * lambda_pi
         # pi_loss += F.mse_loss(log_probs, beh_log_prob).mean()
             pi_loss += F.mse_loss(pi_actions, actions).mean()
