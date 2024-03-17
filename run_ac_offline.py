@@ -33,7 +33,7 @@ if __name__ == '__main__':
     parser.add_argument('--info', default='0', type=str)
     
     # new arguments for running imbalanced datasets
-    parser.add_argument('--dataset_method', default='none', type=str)
+    parser.add_argument('--dataset_method', default='none', type=str) # or is equal to mixed for using custom datasets
     parser.add_argument('--ratio', default=0.05, type=float)
     parser.add_argument('--dataset_level', default='medium', type=str)
 
