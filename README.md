@@ -1,4 +1,4 @@
-This code-base is a reproduction of the code from the paper - 'The In-Sample Softmax for Offline Reinforcement Learning' (https://openreview.net/pdf?id=u-RuvyDYqCM).
+This code-base is a reproduction of the code from the paper with BC-regularizer added as improvement - 'The In-Sample Softmax for Offline Reinforcement Learning' (https://openreview.net/pdf?id=u-RuvyDYqCM).
 
 Here is the reproduction study: Evaluating In-Sample Softmax in Offline Reinforcement Learning (https://openreview.net/pdf/687f7a0120a4282a1b2993ad90a22df39ec7c71f.pdf)
 
